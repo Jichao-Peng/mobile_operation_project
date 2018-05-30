@@ -1,0 +1,8 @@
+bool  isCommunicationOK
+uint16 ultrasonic1Data
+uint16 ultrasonic2Data
+uint16 ultrasonic3Data
+uint16 ultrasonic4Data
+uint16 ultrasonic5Data
+uint16 ultrasonic6Data
+

@@ -1,0 +1,6 @@
+#消息说明：此消息为遥控器PF发向魔术机械臂的消息
+int16 pf_joy2_x
+int16 pf_joy2_y
+int16 pf_joy3_x
+int16 pf_joy3_y
+uint8  pf_velctl

@@ -1,0 +1,8 @@
+bool  isCommunicationOK
+uint8 ultrasonic1Status
+uint8 ultrasonic2Status
+uint8 ultrasonic3Status
+uint8 ultrasonic4Status
+uint8 ultrasonic5Status
+uint8 ultrasonic6Status
+

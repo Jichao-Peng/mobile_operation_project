@@ -1,0 +1,10 @@
+<launch>
+
+<!--	<node name="leo_test" pkg="leo_test" type="leo_test_node" output="screen" />   -->
+
+	<include file="$(find leo_test)/sr300_zr300_nodelet_multiple_cameras.launch" />
+
+	<node name="rviz" pkg="rviz" type="rviz" />
+
+
+</launch>

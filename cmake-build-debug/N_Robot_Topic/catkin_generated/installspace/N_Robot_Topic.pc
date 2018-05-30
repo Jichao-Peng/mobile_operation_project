@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: N_Robot_Topic
+Description: Description of N_Robot_Topic
+Version: 0.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: message_runtime

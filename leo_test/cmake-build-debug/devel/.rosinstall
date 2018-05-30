@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/robot2/catkin_ws/src/leo_test/cmake-build-debug/devel/setup.sh

@@ -1,0 +1,8 @@
+----
+int32  s32ErrCode
+string strErrInfo
+int32 motor1Velocity
+int32 motor2Velocity
+int32 motor3Velocity
+int32 motor4Velocity
+

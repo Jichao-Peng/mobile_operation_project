@@ -1,0 +1,1564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="Project" targetName="N_Robot_Topic_generate_messages" />
+      <config projectName="Project" targetName="ur3_moveit_plugin" />
+      <config projectName="Project" targetName="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicData_msg" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_Digital" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="roscpp_generate_messages_py" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="NMotionCtrl_X64" />
+      <config projectName="Project" targetName="leo_test_node" />
+      <config projectName="Project" targetName="N_Robot_generate_messages" />
+      <config projectName="Project" targetName="clean_test_results" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SuspendMotion_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ContinueMotion_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SMATPositionMode_srv" />
+      <config projectName="Project" targetName="N_Robot_Topic_gencpp" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadEncoderCount_srv" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_RobotStateRTMsg" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="bond_generate_messages_py" />
+      <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
+      <config projectName="Project" targetName="pcl_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="nodelet_generate_messages_cpp" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="moveit_ros_planning_gencfg" />
+      <config projectName="Project" targetName="ur_msgs_genlisp" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_catkin_empty_exported_target" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_CMATSpeedMode_srv" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="actionlib_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetSinglePara_srv" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="N_Robot_gencpp" />
+      <config projectName="Project" targetName="ur_driver_gencfg" />
+      <config projectName="Project" targetName="download_extra_data" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_CmdOnly_srv" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="N_Robot_genlisp" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="pcl_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="ur_msgs_generate_messages" />
+      <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="bond_generate_messages_cpp" />
+      <config projectName="Project" targetName="pcl_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="N_Robot_Topic_generate_messages_py" />
+      <config projectName="Project" targetName="ur_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_py" />
+      <config projectName="Project" targetName="topic_tools_generate_messages_py" />
+      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_SetInstantVelocity_msg" />
+      <config projectName="Project" targetName="ur5_kin" />
+      <config projectName="Project" targetName="ur_msgs_gencpp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadVersion_srv" />
+      <config projectName="Project" targetName="ur_driver" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_WaitForSomeTime_srv" />
+      <config projectName="Project" targetName="control_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="gtest_main" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_OFPS1_SetPosition_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_StartMotion_srv" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_ToolDataMsg" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ClearEncoderCount_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadBatteryVoltage_srv" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotionStatus_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadSinglePara_srv" />
+      <config projectName="Project" targetName="NMotionCtrl_X64_Topic" />
+      <config projectName="Project" targetName="realtime_tools" />
+      <config projectName="Project" targetName="N_Robot_Topic_genlisp" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="ur3_kin" />
+      <config projectName="Project" targetName="N_Robot_generate_messages_cpp" />
+      <config projectName="Project" targetName="N_Robot_Topic_genpy" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ResetAllMotorDriver_srv" />
+      <config projectName="Project" targetName="ur10_kin" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_CAATSpeedMode_srv" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_SetPayload" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_OFPS1_ReadDevInfo_srv" />
+      <config projectName="Project" targetName="gtest" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SMATSpeedMode_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_PBUTTING_ReadStatus_srv" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="ur_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_EncoderCount_msg" />
+      <config projectName="Project" targetName="shape_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_SetIO" />
+      <config projectName="Project" targetName="N_Robot_Topic_generate_messages_lisp" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="tf_generate_messages_cpp" />
+      <config projectName="Project" targetName="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_MotionStatus_msg" />
+      <config projectName="Project" targetName="trajectory_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="doxygen" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotorVelocity_srv" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_MasterboardDataMsg" />
+      <config projectName="Project" targetName="tests" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
+      <config projectName="Project" targetName="octomap_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicData_srv" />
+      <config projectName="Project" targetName="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicStatus_msg" />
+      <config projectName="Project" targetName="control_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_PS_ReadRawData_srv" />
+      <config projectName="Project" targetName="N_Robot_generate_messages_lisp" />
+      <config projectName="Project" targetName="ur_hardware_interface" />
+      <config projectName="Project" targetName="bond_generate_messages_lisp" />
+      <config projectName="Project" targetName="controller_manager_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="control_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_RecoverFactorySet_srv" />
+      <config projectName="Project" targetName="ur10_moveit_plugin" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
+      <config projectName="Project" targetName="pcl_ros_gencfg" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_DefineMotorSpeed_srv" />
+      <config projectName="Project" targetName="N_Robot_genpy" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_OFPS1_ReadPosition_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_CMATPositionMode_srv" />
+      <config projectName="Project" targetName="N_Robot_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SavePara_srv" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="run_tests" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_JumpToNextCmd_srv" />
+      <config projectName="Project" targetName="ur_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="nodelet_generate_messages_py" />
+      <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="Project" targetName="nodelet_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_StopMotion_srv" />
+      <config projectName="Project" targetName="topic_tools_generate_messages_cpp" />
+      <config projectName="Project" targetName="topic_tools_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_STATPositionMode_srv" />
+      <config projectName="Project" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_CAATPositionMode_srv" />
+      <config projectName="Project" targetName="N_Robot_Topic_generate_messages_cpp" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="ur_msgs_genpy" />
+      <config projectName="Project" targetName="moveit_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetDir_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_PBUTTING_ReadDevInfo_srv" />
+      <config projectName="Project" targetName="ur5_moveit_plugin" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_WaitTime_srv" />
+      <config projectName="Project" targetName="object_recognition_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicStatus_srv" />
+      <config projectName="Project" targetName="tf_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadDevInfo_srv" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_IOStates" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_PS_ReadTransData_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_PS_ReadStatus_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_OFPS1_ReadEncoder_srv" />
+      <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_JoyCmdMotion_srv" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetOrientation_srv" />
+      <config projectName="Project" targetName="visualization_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetInstantVelocity_srv" />
+      <config projectName="Project" targetName="_ur_msgs_generate_messages_check_deps_Analog" />
+      <config projectName="Project" targetName="tf_generate_messages_py" />
+      <config projectName="Project" targetName="_N_Robot_generate_messages_check_deps_PS_ReadDevInfo_srv" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="db6b735b-4ea6-4ac4-a444-9e26b9b257f6" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NMotionCtrl.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/NMotionCtrl.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-354">
+              <caret line="1354" column="0" lean-forward="true" selection-start-line="1354" selection-start-column="0" selection-end-line="1354" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UartNMotion.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UartNMotion.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="286" column="14" lean-forward="true" selection-start-line="286" selection-start-column="14" selection-end-line="286" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Project.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/Project.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UART.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UART.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UARTDev.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UARTDev.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="10" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UartNMotion.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UartNMotion.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-210">
+              <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDefine.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UserDefine.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Algorithm.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/Algorithm.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>timeOfPublish</find>
+      <find>msCount</find>
+      <find>FucReadMotionStatus</find>
+      <find>acData</find>
+      <find>ac</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/N_Robot_Topic/src/UserDefine.h" />
+        <option value="$PROJECT_DIR$/N_Robot_Topic/src/NMotionCtrl.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N_Robot_Topic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="N_Robot_Topic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.NMotionCtrl_X64_Topic">
+    <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
+    <configuration default="true" type="FirefoxRemoteDebugType" factoryName="Firefox Remote">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeWebKit" factoryName="NW.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="src" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ReactNative" factoryName="React Native">
+      <node-interpreter value="project" />
+      <platform value="ANDROID" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="src" />
+      <method />
+    </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="src" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="src" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="src" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="src" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="clean_test_results" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="clean_test_results" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="download_extra_data" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="download_extra_data" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="doxygen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="doxygen" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="run_tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="run_tests" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tests" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="actionlib_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="actionlib_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="actionlib_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="actionlib_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="actionlib_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="actionlib_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="actionlib_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="bond_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="bond_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="bond_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="bond_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="bond_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="bond_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="dynamic_reconfigure_gencfg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="dynamic_reconfigure_gencfg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="dynamic_reconfigure_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="dynamic_reconfigure_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="dynamic_reconfigure_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="dynamic_reconfigure_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="dynamic_reconfigure_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="dynamic_reconfigure_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="geometry_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="geometry_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="geometry_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="geometry_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="geometry_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="geometry_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="leo_test_node" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="leo_test_node" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="leo_test_node">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="nodelet_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="nodelet_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="nodelet_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="nodelet_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="nodelet_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="nodelet_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="pcl_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pcl_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="pcl_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pcl_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="pcl_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pcl_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="pcl_ros_gencfg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pcl_ros_gencfg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="sensor_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="sensor_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="sensor_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="sensor_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="sensor_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="sensor_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="tf2_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf2_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="tf2_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf2_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="tf2_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf2_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="tf_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="tf_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="tf_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tf_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="topic_tools_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="topic_tools_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="topic_tools_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="topic_tools_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="topic_tools_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="topic_tools_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_CmdOnly_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_CmdOnly_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_CAATPositionMode_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_CAATPositionMode_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_CAATSpeedMode_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_CAATSpeedMode_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ClearEncoderCount_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ClearEncoderCount_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_CMATPositionMode_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_CMATPositionMode_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_CMATSpeedMode_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_CMATSpeedMode_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ContinueMotion_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ContinueMotion_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_DefineMotorSpeed_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_DefineMotorSpeed_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_JoyCmdMotion_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_JoyCmdMotion_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_JumpToNextCmd_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_JumpToNextCmd_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadBatteryVoltage_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadBatteryVoltage_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadDevInfo_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadDevInfo_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadEncoderCount_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadEncoderCount_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotionStatus_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotionStatus_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotorVelocity_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotorVelocity_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadSinglePara_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadSinglePara_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicData_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicData_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicStatus_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicStatus_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadVersion_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ReadVersion_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_RecoverFactorySet_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_RecoverFactorySet_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_ResetAllMotorDriver_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_ResetAllMotorDriver_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SavePara_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SavePara_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetDir_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetDir_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetInstantVelocity_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetInstantVelocity_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetOrientation_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetOrientation_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetSinglePara_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SetSinglePara_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SMATPositionMode_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SMATPositionMode_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SMATSpeedMode_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SMATSpeedMode_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_StartMotion_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_StartMotion_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_STATPositionMode_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_STATPositionMode_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_StopMotion_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_StopMotion_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_SuspendMotion_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_SuspendMotion_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_WaitForSomeTime_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_WaitForSomeTime_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_NMotionCtrl_WaitTime_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_NMotionCtrl_WaitTime_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_OFPS1_ReadDevInfo_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_OFPS1_ReadDevInfo_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_OFPS1_ReadEncoder_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_OFPS1_ReadEncoder_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_OFPS1_ReadPosition_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_OFPS1_ReadPosition_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_OFPS1_SetPosition_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_OFPS1_SetPosition_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_PBUTTING_ReadDevInfo_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_PBUTTING_ReadDevInfo_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_PBUTTING_ReadStatus_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_PBUTTING_ReadStatus_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_PS_ReadDevInfo_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_PS_ReadDevInfo_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_PS_ReadRawData_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_PS_ReadRawData_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_PS_ReadStatus_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_PS_ReadStatus_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_generate_messages_check_deps_PS_ReadTransData_srv" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_generate_messages_check_deps_PS_ReadTransData_srv" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_gencpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_generate_messages" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_genlisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_genpy" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NMotionCtrl_X64" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="NMotionCtrl_X64" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="NMotionCtrl_X64">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="roscpp_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="roscpp_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="roscpp_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="roscpp_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="roscpp_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="roscpp_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="rosgraph_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rosgraph_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="rosgraph_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rosgraph_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="rosgraph_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rosgraph_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_EncoderCount_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_EncoderCount_msg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_MotionStatus_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_MotionStatus_msg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_SetInstantVelocity_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_SetInstantVelocity_msg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicData_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicData_msg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicStatus_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicStatus_msg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_Topic_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_Topic_gencpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_Topic_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_Topic_generate_messages" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_Topic_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_Topic_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_Topic_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_Topic_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_Topic_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_Topic_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_Topic_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_Topic_genlisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="N_Robot_Topic_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="N_Robot_Topic_genpy" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="NMotionCtrl_X64_Topic" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="NMotionCtrl_X64_Topic" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="NMotionCtrl_X64_Topic">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="realtime_tools" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="realtime_tools" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_catkin_empty_exported_target" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_catkin_empty_exported_target" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_driver_gencfg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_driver_gencfg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="moveit_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="moveit_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="moveit_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="moveit_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="moveit_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="moveit_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="moveit_ros_planning_gencfg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="moveit_ros_planning_gencfg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="object_recognition_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="object_recognition_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="object_recognition_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="object_recognition_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="object_recognition_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="object_recognition_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="octomap_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="octomap_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="octomap_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="octomap_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="octomap_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="octomap_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="shape_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="shape_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="shape_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="shape_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="shape_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="shape_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur10_kin" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur10_kin" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur10_moveit_plugin" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur10_moveit_plugin" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur3_kin" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur3_kin" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur3_moveit_plugin" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur3_moveit_plugin" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur5_kin" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur5_kin" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur5_moveit_plugin" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur5_moveit_plugin" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="visualization_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="visualization_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="visualization_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="visualization_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="visualization_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="visualization_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_Analog" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_Analog" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_Digital" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_Digital" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_IOStates" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_IOStates" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_MasterboardDataMsg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_MasterboardDataMsg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_RobotStateRTMsg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_RobotStateRTMsg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_SetIO" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_SetIO" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_SetPayload" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_SetPayload" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="_ur_msgs_generate_messages_check_deps_ToolDataMsg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_ur_msgs_generate_messages_check_deps_ToolDataMsg" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="std_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="std_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="std_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="std_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="std_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="std_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_msgs_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_msgs_gencpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_msgs_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_msgs_generate_messages" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_msgs_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_msgs_genlisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_msgs_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_msgs_genpy" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="control_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="control_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="control_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="control_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="controller_manager_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="controller_manager_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="controller_manager_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="controller_manager_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="controller_manager_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="controller_manager_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="trajectory_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="trajectory_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="trajectory_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="trajectory_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="trajectory_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="trajectory_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_driver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_driver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="ur_driver">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ur_hardware_interface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="ur_hardware_interface" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <list size="169">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.clean_test_results" />
+      <item index="2" class="java.lang.String" itemvalue="Application.download_extra_data" />
+      <item index="3" class="java.lang.String" itemvalue="Application.doxygen" />
+      <item index="4" class="java.lang.String" itemvalue="Application.run_tests" />
+      <item index="5" class="java.lang.String" itemvalue="Application.tests" />
+      <item index="6" class="java.lang.String" itemvalue="Application.actionlib_generate_messages_cpp" />
+      <item index="7" class="java.lang.String" itemvalue="Application.actionlib_generate_messages_lisp" />
+      <item index="8" class="java.lang.String" itemvalue="Application.actionlib_generate_messages_py" />
+      <item index="9" class="java.lang.String" itemvalue="Application.actionlib_msgs_generate_messages_cpp" />
+      <item index="10" class="java.lang.String" itemvalue="Application.actionlib_msgs_generate_messages_lisp" />
+      <item index="11" class="java.lang.String" itemvalue="Application.actionlib_msgs_generate_messages_py" />
+      <item index="12" class="java.lang.String" itemvalue="Application.bond_generate_messages_cpp" />
+      <item index="13" class="java.lang.String" itemvalue="Application.bond_generate_messages_lisp" />
+      <item index="14" class="java.lang.String" itemvalue="Application.bond_generate_messages_py" />
+      <item index="15" class="java.lang.String" itemvalue="Application.dynamic_reconfigure_gencfg" />
+      <item index="16" class="java.lang.String" itemvalue="Application.dynamic_reconfigure_generate_messages_cpp" />
+      <item index="17" class="java.lang.String" itemvalue="Application.dynamic_reconfigure_generate_messages_lisp" />
+      <item index="18" class="java.lang.String" itemvalue="Application.dynamic_reconfigure_generate_messages_py" />
+      <item index="19" class="java.lang.String" itemvalue="Application.geometry_msgs_generate_messages_cpp" />
+      <item index="20" class="java.lang.String" itemvalue="Application.geometry_msgs_generate_messages_lisp" />
+      <item index="21" class="java.lang.String" itemvalue="Application.geometry_msgs_generate_messages_py" />
+      <item index="22" class="java.lang.String" itemvalue="Application.leo_test_node" />
+      <item index="23" class="java.lang.String" itemvalue="Application.nodelet_generate_messages_cpp" />
+      <item index="24" class="java.lang.String" itemvalue="Application.nodelet_generate_messages_lisp" />
+      <item index="25" class="java.lang.String" itemvalue="Application.nodelet_generate_messages_py" />
+      <item index="26" class="java.lang.String" itemvalue="Application.pcl_msgs_generate_messages_cpp" />
+      <item index="27" class="java.lang.String" itemvalue="Application.pcl_msgs_generate_messages_lisp" />
+      <item index="28" class="java.lang.String" itemvalue="Application.pcl_msgs_generate_messages_py" />
+      <item index="29" class="java.lang.String" itemvalue="Application.pcl_ros_gencfg" />
+      <item index="30" class="java.lang.String" itemvalue="Application.sensor_msgs_generate_messages_cpp" />
+      <item index="31" class="java.lang.String" itemvalue="Application.sensor_msgs_generate_messages_lisp" />
+      <item index="32" class="java.lang.String" itemvalue="Application.sensor_msgs_generate_messages_py" />
+      <item index="33" class="java.lang.String" itemvalue="Application.tf2_msgs_generate_messages_cpp" />
+      <item index="34" class="java.lang.String" itemvalue="Application.tf2_msgs_generate_messages_lisp" />
+      <item index="35" class="java.lang.String" itemvalue="Application.tf2_msgs_generate_messages_py" />
+      <item index="36" class="java.lang.String" itemvalue="Application.tf_generate_messages_cpp" />
+      <item index="37" class="java.lang.String" itemvalue="Application.tf_generate_messages_lisp" />
+      <item index="38" class="java.lang.String" itemvalue="Application.tf_generate_messages_py" />
+      <item index="39" class="java.lang.String" itemvalue="Application.topic_tools_generate_messages_cpp" />
+      <item index="40" class="java.lang.String" itemvalue="Application.topic_tools_generate_messages_lisp" />
+      <item index="41" class="java.lang.String" itemvalue="Application.topic_tools_generate_messages_py" />
+      <item index="42" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_CmdOnly_srv" />
+      <item index="43" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_CAATPositionMode_srv" />
+      <item index="44" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_CAATSpeedMode_srv" />
+      <item index="45" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ClearEncoderCount_srv" />
+      <item index="46" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_CMATPositionMode_srv" />
+      <item index="47" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_CMATSpeedMode_srv" />
+      <item index="48" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ContinueMotion_srv" />
+      <item index="49" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_DefineMotorSpeed_srv" />
+      <item index="50" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_JoyCmdMotion_srv" />
+      <item index="51" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_JumpToNextCmd_srv" />
+      <item index="52" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadBatteryVoltage_srv" />
+      <item index="53" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadDevInfo_srv" />
+      <item index="54" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadEncoderCount_srv" />
+      <item index="55" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotionStatus_srv" />
+      <item index="56" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadMotorVelocity_srv" />
+      <item index="57" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadSinglePara_srv" />
+      <item index="58" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicData_srv" />
+      <item index="59" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadUltrasonicStatus_srv" />
+      <item index="60" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ReadVersion_srv" />
+      <item index="61" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_RecoverFactorySet_srv" />
+      <item index="62" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_ResetAllMotorDriver_srv" />
+      <item index="63" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SavePara_srv" />
+      <item index="64" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SetDir_srv" />
+      <item index="65" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SetInstantVelocity_srv" />
+      <item index="66" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SetOrientation_srv" />
+      <item index="67" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SetSinglePara_srv" />
+      <item index="68" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SMATPositionMode_srv" />
+      <item index="69" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SMATSpeedMode_srv" />
+      <item index="70" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_StartMotion_srv" />
+      <item index="71" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_STATPositionMode_srv" />
+      <item index="72" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_StopMotion_srv" />
+      <item index="73" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_SuspendMotion_srv" />
+      <item index="74" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_WaitForSomeTime_srv" />
+      <item index="75" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_NMotionCtrl_WaitTime_srv" />
+      <item index="76" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_OFPS1_ReadDevInfo_srv" />
+      <item index="77" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_OFPS1_ReadEncoder_srv" />
+      <item index="78" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_OFPS1_ReadPosition_srv" />
+      <item index="79" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_OFPS1_SetPosition_srv" />
+      <item index="80" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_PBUTTING_ReadDevInfo_srv" />
+      <item index="81" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_PBUTTING_ReadStatus_srv" />
+      <item index="82" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_PS_ReadDevInfo_srv" />
+      <item index="83" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_PS_ReadRawData_srv" />
+      <item index="84" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_PS_ReadStatus_srv" />
+      <item index="85" class="java.lang.String" itemvalue="Application._N_Robot_generate_messages_check_deps_PS_ReadTransData_srv" />
+      <item index="86" class="java.lang.String" itemvalue="Application.N_Robot_gencpp" />
+      <item index="87" class="java.lang.String" itemvalue="Application.N_Robot_generate_messages" />
+      <item index="88" class="java.lang.String" itemvalue="Application.N_Robot_generate_messages_cpp" />
+      <item index="89" class="java.lang.String" itemvalue="Application.N_Robot_generate_messages_lisp" />
+      <item index="90" class="java.lang.String" itemvalue="Application.N_Robot_generate_messages_py" />
+      <item index="91" class="java.lang.String" itemvalue="Application.N_Robot_genlisp" />
+      <item index="92" class="java.lang.String" itemvalue="Application.N_Robot_genpy" />
+      <item index="93" class="java.lang.String" itemvalue="Application.NMotionCtrl_X64" />
+      <item index="94" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_cpp" />
+      <item index="95" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_lisp" />
+      <item index="96" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_py" />
+      <item index="97" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_cpp" />
+      <item index="98" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_lisp" />
+      <item index="99" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_py" />
+      <item index="100" class="java.lang.String" itemvalue="Application._N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_EncoderCount_msg" />
+      <item index="101" class="java.lang.String" itemvalue="Application._N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_MotionStatus_msg" />
+      <item index="102" class="java.lang.String" itemvalue="Application._N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_SetInstantVelocity_msg" />
+      <item index="103" class="java.lang.String" itemvalue="Application._N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicData_msg" />
+      <item index="104" class="java.lang.String" itemvalue="Application._N_Robot_Topic_generate_messages_check_deps_NMotionCtrlTopic_UltrasonicStatus_msg" />
+      <item index="105" class="java.lang.String" itemvalue="Application.N_Robot_Topic_gencpp" />
+      <item index="106" class="java.lang.String" itemvalue="Application.N_Robot_Topic_generate_messages" />
+      <item index="107" class="java.lang.String" itemvalue="Application.N_Robot_Topic_generate_messages_cpp" />
+      <item index="108" class="java.lang.String" itemvalue="Application.N_Robot_Topic_generate_messages_lisp" />
+      <item index="109" class="java.lang.String" itemvalue="Application.N_Robot_Topic_generate_messages_py" />
+      <item index="110" class="java.lang.String" itemvalue="Application.N_Robot_Topic_genlisp" />
+      <item index="111" class="java.lang.String" itemvalue="Application.N_Robot_Topic_genpy" />
+      <item index="112" class="java.lang.String" itemvalue="Application.NMotionCtrl_X64_Topic" />
+      <item index="113" class="java.lang.String" itemvalue="Application.realtime_tools" />
+      <item index="114" class="java.lang.String" itemvalue="Application._catkin_empty_exported_target" />
+      <item index="115" class="java.lang.String" itemvalue="Application.ur_driver_gencfg" />
+      <item index="116" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_cpp" />
+      <item index="117" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_lisp" />
+      <item index="118" class="java.lang.String" itemvalue="Application.moveit_msgs_generate_messages_py" />
+      <item index="119" class="java.lang.String" itemvalue="Application.moveit_ros_planning_gencfg" />
+      <item index="120" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_cpp" />
+      <item index="121" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_lisp" />
+      <item index="122" class="java.lang.String" itemvalue="Application.object_recognition_msgs_generate_messages_py" />
+      <item index="123" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_cpp" />
+      <item index="124" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_lisp" />
+      <item index="125" class="java.lang.String" itemvalue="Application.octomap_msgs_generate_messages_py" />
+      <item index="126" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_cpp" />
+      <item index="127" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_lisp" />
+      <item index="128" class="java.lang.String" itemvalue="Application.shape_msgs_generate_messages_py" />
+      <item index="129" class="java.lang.String" itemvalue="Application.ur10_kin" />
+      <item index="130" class="java.lang.String" itemvalue="Application.ur10_moveit_plugin" />
+      <item index="131" class="java.lang.String" itemvalue="Application.ur3_kin" />
+      <item index="132" class="java.lang.String" itemvalue="Application.ur3_moveit_plugin" />
+      <item index="133" class="java.lang.String" itemvalue="Application.ur5_kin" />
+      <item index="134" class="java.lang.String" itemvalue="Application.ur5_moveit_plugin" />
+      <item index="135" class="java.lang.String" itemvalue="Application.visualization_msgs_generate_messages_cpp" />
+      <item index="136" class="java.lang.String" itemvalue="Application.visualization_msgs_generate_messages_lisp" />
+      <item index="137" class="java.lang.String" itemvalue="Application.visualization_msgs_generate_messages_py" />
+      <item index="138" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_Analog" />
+      <item index="139" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_Digital" />
+      <item index="140" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_IOStates" />
+      <item index="141" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_MasterboardDataMsg" />
+      <item index="142" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_RobotStateRTMsg" />
+      <item index="143" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_SetIO" />
+      <item index="144" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_SetPayload" />
+      <item index="145" class="java.lang.String" itemvalue="Application._ur_msgs_generate_messages_check_deps_ToolDataMsg" />
+      <item index="146" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_cpp" />
+      <item index="147" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_lisp" />
+      <item index="148" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_py" />
+      <item index="149" class="java.lang.String" itemvalue="Application.ur_msgs_gencpp" />
+      <item index="150" class="java.lang.String" itemvalue="Application.ur_msgs_generate_messages" />
+      <item index="151" class="java.lang.String" itemvalue="Application.ur_msgs_generate_messages_cpp" />
+      <item index="152" class="java.lang.String" itemvalue="Application.ur_msgs_generate_messages_lisp" />
+      <item index="153" class="java.lang.String" itemvalue="Application.ur_msgs_generate_messages_py" />
+      <item index="154" class="java.lang.String" itemvalue="Application.ur_msgs_genlisp" />
+      <item index="155" class="java.lang.String" itemvalue="Application.ur_msgs_genpy" />
+      <item index="156" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_cpp" />
+      <item index="157" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_lisp" />
+      <item index="158" class="java.lang.String" itemvalue="Application.control_msgs_generate_messages_py" />
+      <item index="159" class="java.lang.String" itemvalue="Application.controller_manager_msgs_generate_messages_cpp" />
+      <item index="160" class="java.lang.String" itemvalue="Application.controller_manager_msgs_generate_messages_lisp" />
+      <item index="161" class="java.lang.String" itemvalue="Application.controller_manager_msgs_generate_messages_py" />
+      <item index="162" class="java.lang.String" itemvalue="Application.trajectory_msgs_generate_messages_cpp" />
+      <item index="163" class="java.lang.String" itemvalue="Application.trajectory_msgs_generate_messages_lisp" />
+      <item index="164" class="java.lang.String" itemvalue="Application.trajectory_msgs_generate_messages_py" />
+      <item index="165" class="java.lang.String" itemvalue="Application.ur_driver" />
+      <item index="166" class="java.lang.String" itemvalue="Application.ur_hardware_interface" />
+      <item index="167" class="java.lang.String" itemvalue="Application.gtest" />
+      <item index="168" class="java.lang.String" itemvalue="Application.gtest_main" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db6b735b-4ea6-4ac4-a444-9e26b9b257f6" name="Default" comment="" />
+      <created>1527681429796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527681429796</updated>
+      <workItem from="1527681431463" duration="2128000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2128000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UART.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/Project.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UARTDev.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UartNMotion.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/Algorithm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UserDefine.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/UartNMotion.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="286" column="14" lean-forward="true" selection-start-line="286" selection-start-column="14" selection-end-line="286" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/N_Robot_Topic/src/NMotionCtrl.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-354">
+          <caret line="1354" column="0" lean-forward="true" selection-start-line="1354" selection-start-column="0" selection-end-line="1354" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

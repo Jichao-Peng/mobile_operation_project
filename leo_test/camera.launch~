@@ -1,0 +1,17 @@
+ <launch>  
+          <arg name="camera_in" />  
+          <arg name="camera_to" /> 
+ 
+          <include file="$(find realsense_camera)/launch/zr300_nodelet_default.launch">  
+              <arg name="camera" value="camera_to" />  
+          </include>  
+      
+  
+          <include file="$(find realsense_camera)/launch/sr300_nodelet_default.launch">  
+              <arg name="camera" value="camera_in" />  
+          </include>  
+      
+  
+	 <node name="rviz" pkg="rviz" type="rviz"/>  
+          
+</launch>

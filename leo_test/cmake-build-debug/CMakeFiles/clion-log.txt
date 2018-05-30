@@ -1,0 +1,17 @@
+/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/robot2/catkin_ws/src/leo_test
+-- Using CATKIN_DEVEL_PREFIX: /home/robot2/catkin_ws/src/leo_test/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /home/robot2/catkin_ws/devel;/opt/ros/indigo
+-- This workspace overlays: /home/robot2/catkin_ws/devel;/opt/ros/indigo
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/robot2/catkin_ws/src/leo_test/cmake-build-debug/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.6.19
+-- Using these message generators: gencpp;genlisp;genpy
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/robot2/catkin_ws/src/leo_test/cmake-build-debug
