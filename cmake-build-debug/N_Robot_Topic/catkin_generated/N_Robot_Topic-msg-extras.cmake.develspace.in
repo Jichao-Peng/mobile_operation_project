@@ -1,2 +1,0 @@
-set(N_Robot_Topic_MESSAGE_FILES "/home/robot2/catkin_ws/src/N_Robot_Topic/msg/NMotionCtrlTopic_EncoderCount_msg.msg;/home/robot2/catkin_ws/src/N_Robot_Topic/msg/NMotionCtrlTopic_MotionStatus_msg.msg;/home/robot2/catkin_ws/src/N_Robot_Topic/msg/NMotionCtrlTopic_UltrasonicData_msg.msg;/home/robot2/catkin_ws/src/N_Robot_Topic/msg/NMotionCtrlTopic_UltrasonicStatus_msg.msg;/home/robot2/catkin_ws/src/N_Robot_Topic/msg/NMotionCtrlTopic_SetInstantVelocity_msg.msg")
-set(N_Robot_Topic_SERVICE_FILES "")

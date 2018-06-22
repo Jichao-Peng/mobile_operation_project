@@ -1,8 +1,0 @@
-prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
-
-Name: N_Robot
-Description: Description of N_Robot
-Version: 0.0.0
-Cflags: -I/home/robot2/catkin_ws/src/cmake-build-debug/devel/include
-Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
-Requires: roscpp rospy std_msgs message_runtime

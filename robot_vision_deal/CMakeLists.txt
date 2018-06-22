@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(N_Robot_Topic)
+project(robot_vision_deal)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -8,10 +8,12 @@ project(N_Robot_Topic)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  cv_bridge
+  pcl_conversions
+  pcl_ros
   roscpp
   rospy
   std_msgs
-  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -48,16 +50,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
- add_message_files(
-   FILES
-    NMotionCtrlTopic_EncoderCount_msg.msg
-    NMotionCtrlTopic_MotionStatus_msg.msg
-    NMotionCtrlTopic_UltrasonicData_msg.msg
-    NMotionCtrlTopic_UltrasonicStatus_msg.msg
-    NMotionCtrlTopic_SetInstantVelocity_msg.msg
-    NMotionCtrlTopic_BatteryVoltage_msg.msg
-    NMotionCtrlTopic_ClearEncoderCount_msg.msg
- )
+# add_message_files(
+#   FILES
+#   Message1.msg
+#   Message2.msg
+# )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -74,10 +71,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   std_msgs
- )
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -110,10 +107,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES N_Robot_Topic
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+#  LIBRARIES robot_vision_deal
+#  CATKIN_DEPENDS cv_bridge pcl_conversions pcl_ros roscpp rospy std_msgs
 #  DEPENDS system_lib
-    CATKIN_DEPENDS message_runtime
 )
 
 ###########
@@ -129,7 +125,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/N_Robot_Topic.cpp
+#   src/${PROJECT_NAME}/robot_vision_deal.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -140,7 +136,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/N_Robot_Topic_node.cpp)
+add_executable(${PROJECT_NAME}_node src/robot_vision_deal.cpp src/robot_vision_deal.h)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,12 +146,12 @@ include_directories(
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(${PROJECT_NAME}_node
+  ${catkin_LIBRARIES}
+ )
 
 #############
 ## Install ##
@@ -197,13 +193,10 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_N_Robot_Topic.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_robot_vision_deal.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(NMotionCtrl_X64_Topic src/UART.cpp src/UARTDev.cpp src/UartNMotion.cpp src/NMotionCtrl.cpp src/Algorithm.cpp)
-target_link_libraries(NMotionCtrl_X64_Topic ${catkin_LIBRARIES} )
-add_dependencies(NMotionCtrl_X64_Topic N_robot_Topic_generate_messages_cpp)

@@ -1,8 +1,0 @@
-prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
-
-Name: N_Robot_Topic
-Description: Description of N_Robot_Topic
-Version: 0.0.0
-Cflags: -I/home/robot2/catkin_ws/src/cmake-build-debug/devel/include
-Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
-Requires: message_runtime

@@ -27,6 +27,7 @@ int UART0_Open(char* port)
     int fd;
 
     fd = open( port, O_RDWR|O_NOCTTY|O_NDELAY);
+
     if (FALSE == fd)
     {
        perror("Redsky UART:Can't Open Serial Port");
@@ -185,8 +186,8 @@ int UART0_Set(int fd,int speed,int flow_ctrl,int databits,int stopbits,int parit
     options.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG);   /*Input*/
 
     //设置等待时间和最小接收字符
-    options.c_cc[VTIME] = 1; /* 读取一个字符等待1*(1/10)s */
-    options.c_cc[VMIN] = 1; /* 读取字符的最少个数为1 */
+    options.c_cc[VTIME] = 0; /* 读取一个字符等待1*(1/10)s */
+    options.c_cc[VMIN] = 0; /* 读取字符的最少个数为1 */
 
     //如果发生数据溢出，接收数据，但是不再读取
     tcflush(fd,TCIFLUSH);

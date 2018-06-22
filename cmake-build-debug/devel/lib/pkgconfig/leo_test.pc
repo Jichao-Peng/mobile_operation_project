@@ -1,8 +1,0 @@
-prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
-
-Name: leo_test
-Description: Description of leo_test
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
-Requires: 

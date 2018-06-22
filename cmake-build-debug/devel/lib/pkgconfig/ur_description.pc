@@ -1,8 +1,0 @@
-prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
-
-Name: ur_description
-Description: Description of ur_description
-Version: 1.1.11
-Cflags: 
-Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
-Requires: 

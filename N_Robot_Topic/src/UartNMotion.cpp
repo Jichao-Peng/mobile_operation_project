@@ -3,10 +3,11 @@
 #include "UartNMotion.h"
 #include <unistd.h> //sleep()
 #include "Algorithm.h"
-
+#include<sys/time.h>
 //宏定义
 #define WAIT_RES_TIME 0.008
-
+extern struct timeval timeVal1,timeVal2;
+extern struct timezone timeZone;
 //
 UartNMotion::UartNMotion(){
     printf("creatting UartNMotion\n");
@@ -38,10 +39,12 @@ int UartNMotion::ReceiveFunction(const int nRcvLenEx,char *acRcvBuf,string &strE
     unsigned int nBufStartIndex;
     //char acRcvBuf[nRcvLenEx];
     unsigned short wCRC;
-
+    int j;
     nRcvLen=0;
+#if 0
     for(int i=0;i<10;i++){
-        usleep(1000000*WAIT_RES_TIME);
+        //usleep(1000000*WAIT_RES_TIME);
+        usleep(10000);
         nLen = UART0_Recv(fd, acUartRcvBuf,RCVBUF_LEN);
         if(nLen<=0) continue;
         printf("receive data length:%d.The effective data: ",nLen);
@@ -71,6 +74,29 @@ int UartNMotion::ReceiveFunction(const int nRcvLenEx,char *acRcvBuf,string &strE
         return 3;
     }
     return 0;
+#endif
+    usleep(RECEIVE_WAIT_TIME);
+    nLen = read(fd, acUartRcvBuf,RCVBUF_LEN);
+
+    if(nLen==nRcvLenEx){
+        for(j=0;j<nLen;j++){
+            acRcvBuf[j]=acUartRcvBuf[j];
+        }
+
+        if(acRcvBuf[0]!=0xaa && acRcvBuf[nLen-1]!=0x0d){
+            strErr="receive start/end byte failed!";
+            return 2;//receive error
+        }
+        wCRC=do_crc_MSB((unsigned char *)acRcvBuf, nLen-3);//CRC verify
+        if(acRcvBuf[nLen-3]!=(char)(wCRC&0x00ff)||acRcvBuf[nLen-2]!=(char)(wCRC>>8)){
+            strErr="crc check failed!";
+            return 3;//crc error
+        }
+        return 0;//correct
+    }else{
+        strErr="receive lengh  failed!";
+        return 1;//lengh error
+    }
 }
 
 int UartNMotion::ReadDevInfo(unsigned char  acData[],string &strErr){
@@ -283,6 +309,56 @@ int UartNMotion::Reboot(unsigned char  acData[],string &strErr){
     //
     return 0;
 }
+
+
+int UartNMotion::ReadMotionStatus(unsigned char  acData[],string &strErr){
+    const int nSendLenEx=(8+0);
+    const int nRcvLenEx=(8+7);
+
+    char acSendBuf[nSendLenEx];
+    char acRcvBuf[nRcvLenEx];
+    strErr="";
+    int nSendLen;
+    unsigned short wCRC;
+    int tempReturnReceive;
+    //Union64 union64;
+    acSendBuf[0]=0xAA;
+    acSendBuf[1]=bytDevType;
+    acSendBuf[2]=bytDevInfo;
+    acSendBuf[3]=0x2A;
+    acSendBuf[4]=nSendLenEx-8;
+    for(int i=0;i<nSendLenEx-8;i++){
+        acSendBuf[5+i]=acData[i];
+    }
+    wCRC=do_crc_MSB((unsigned char *)acSendBuf, nSendLenEx-3);//CRC verify
+    acSendBuf[nSendLenEx-3]=(char)(wCRC&0x00ff);
+    acSendBuf[nSendLenEx-2]=(char)(wCRC>>8);
+    acSendBuf[nSendLenEx-1]=0x0D;
+    //clear the buffer
+    read(fd, acUartRcvBuf,RCVBUF_LEN);
+    //send data
+    nSendLen = UART0_Send(fd,acSendBuf,nSendLenEx);
+    if(nSendLen ==nSendLenEx){
+     //   printf("send data success:%d\n",nSendLen);
+    }else{
+        strErr="send data fail!";
+        return 1;
+    }
+    //receive data
+    tempReturnReceive=ReceiveFunction(nRcvLenEx,acRcvBuf,strErr);
+    if(tempReturnReceive==0){
+        for(int i=0;i<nRcvLenEx-8;i++){
+            acData[i]=acRcvBuf[5+i];
+        }
+        return 0;
+    }else{
+        for(int i=0;i<nRcvLenEx-8;i++){
+            acData[i]=0;
+        }
+        return tempReturnReceive;
+    }
+}
+#if 0
 int UartNMotion::ReadMotionStatus(unsigned char  acData[],string &strErr){
     strErr="";
     int nLen;
@@ -351,6 +427,7 @@ int UartNMotion::ReadMotionStatus(unsigned char  acData[],string &strErr){
     //
     return 0;
 }
+#endif
 int UartNMotion::ResetAllMotorDriver(unsigned char  acData[],string &strErr){
     strErr="";
     int nLen;
@@ -1141,6 +1218,54 @@ int UartNMotion::WaitTime(unsigned char  acData[],string &strErr){
     return 0;
 }
 int UartNMotion::SetInstantVelocity(unsigned char  acData[],string &strErr){
+    const int nSendLenEx=(8+6);
+    const int nRcvLenEx=(8+1);
+
+    char acSendBuf[nSendLenEx];
+    char acRcvBuf[nRcvLenEx];
+    strErr="";
+    int nSendLen;
+    unsigned short wCRC;
+    int tempReturnReceive;
+    //Union64 union64;
+    acSendBuf[0]=0xAA;
+    acSendBuf[1]=bytDevType;
+    acSendBuf[2]=bytDevInfo;
+    acSendBuf[3]=0x36;
+    acSendBuf[4]=nSendLenEx-8;
+    for(int i=0;i<nSendLenEx-8;i++){
+        acSendBuf[5+i]=acData[i];
+    }
+    wCRC=do_crc_MSB((unsigned char *)acSendBuf, nSendLenEx-3);//CRC verify
+    acSendBuf[nSendLenEx-3]=(char)(wCRC&0x00ff);
+    acSendBuf[nSendLenEx-2]=(char)(wCRC>>8);
+    acSendBuf[nSendLenEx-1]=0x0D;
+    //clear the buffer
+    read(fd, acUartRcvBuf,RCVBUF_LEN);
+    //send data
+    nSendLen = UART0_Send(fd,acSendBuf,nSendLenEx);
+    if(nSendLen ==nSendLenEx){
+        //printf("send data success:%d\n",nSendLen);
+    }else{
+        strErr="send data fail!";
+        return 1;
+    }
+    //receive data
+    tempReturnReceive=ReceiveFunction(nRcvLenEx,acRcvBuf,strErr);
+    if(tempReturnReceive==0){
+        for(int i=0;i<nRcvLenEx-8;i++){
+            acData[i]=acRcvBuf[5+i];
+        }
+        return 0;
+    }else{
+        for(int i=0;i<nRcvLenEx-8;i++){
+            acData[i]=0;
+        }
+        return tempReturnReceive;
+    }
+}
+#if 0
+int UartNMotion::SetInstantVelocity(unsigned char  acData[],string &strErr){
     strErr="";
     int nLen;
     int nSendLen;
@@ -1209,6 +1334,7 @@ int UartNMotion::SetInstantVelocity(unsigned char  acData[],string &strErr){
     //
     return 0;
 }
+#endif
 int UartNMotion::SMATSpeedMode(unsigned char  acData[],string &strErr){
     strErr="";
     int nLen;
@@ -2148,7 +2274,7 @@ int UartNMotion::ReadBatteryVoltage(unsigned char  acData[],string &strErr){
     //send data
     nSendLen = UART0_Send(fd,acSendBuf,nSendLenEx);
     if(nSendLen ==nSendLenEx){
-        printf("send data success:%d\n",nSendLen);
+       // printf("send data success:%d\n",nSendLen);
     }else{
         strErr="send data fail!";
         return 1;
@@ -2190,10 +2316,12 @@ int UartNMotion::ReadUltrasonicData(unsigned char  acData[],string &strErr){
     acSendBuf[nSendLenEx-3]=(char)(wCRC&0x00ff);
     acSendBuf[nSendLenEx-2]=(char)(wCRC>>8);
     acSendBuf[nSendLenEx-1]=0x0D;
+    //clear the buffer
+    read(fd, acUartRcvBuf,RCVBUF_LEN);
     //send data
     nSendLen = UART0_Send(fd,acSendBuf,nSendLenEx);
     if(nSendLen ==nSendLenEx){
-        printf("send data success:%d\n",nSendLen);
+     //   printf("send data success:%d\n",nSendLen);
     }else{
         strErr="send data fail!";
         return 1;
@@ -2236,10 +2364,12 @@ int UartNMotion::ReadUltrasonicStatus(unsigned char  acData[],string &strErr){
     acSendBuf[nSendLenEx-3]=(char)(wCRC&0x00ff);
     acSendBuf[nSendLenEx-2]=(char)(wCRC>>8);
     acSendBuf[nSendLenEx-1]=0x0D;
+    //clear the buffer
+    read(fd, acUartRcvBuf,RCVBUF_LEN);
     //send data
     nSendLen = UART0_Send(fd,acSendBuf,nSendLenEx);
     if(nSendLen ==nSendLenEx){
-        printf("send data success:%d\n",nSendLen);
+       // printf("send data success:%d\n",nSendLen);
     }else{
         strErr="send data fail!";
         return 1;
@@ -2326,16 +2456,19 @@ int UartNMotion::ReadEncoderCount(unsigned char  acData[],string &strErr){
     acSendBuf[nSendLenEx-3]=(char)(wCRC&0x00ff);
     acSendBuf[nSendLenEx-2]=(char)(wCRC>>8);
     acSendBuf[nSendLenEx-1]=0x0D;
+    //clear the buffer
+    read(fd, acUartRcvBuf,RCVBUF_LEN);
     //send data
     nSendLen = UART0_Send(fd,acSendBuf,nSendLenEx);
     if(nSendLen ==nSendLenEx){
-        printf("send data success:%d\n",nSendLen);
+       // printf("send data success:%d\n",nSendLen);
     }else{
         strErr="send data fail!";
         return 1;
     }
     //receive data
     tempReturnReceive=ReceiveFunction(nRcvLenEx,acRcvBuf,strErr);
+
     if(tempReturnReceive==0){
         for(int i=0;i<nRcvLenEx-8;i++){
             acData[i]=acRcvBuf[5+i];
@@ -2350,7 +2483,7 @@ int UartNMotion::ReadEncoderCount(unsigned char  acData[],string &strErr){
 }
 int UartNMotion::ClearEncoderCount(unsigned char  acData[],string &strErr){
     const int nSendLenEx=(8+0);
-    const int nRcvLenEx=(8+1);
+    const int nRcvLenEx=(8+0);
 
     char acSendBuf[nSendLenEx];
     char acRcvBuf[nRcvLenEx];
@@ -2374,7 +2507,7 @@ int UartNMotion::ClearEncoderCount(unsigned char  acData[],string &strErr){
     //send data
     nSendLen = UART0_Send(fd,acSendBuf,nSendLenEx);
     if(nSendLen ==nSendLenEx){
-        printf("send data success:%d\n",nSendLen);
+     //   printf("send data success:%d\n",nSendLen);
     }else{
         strErr="send data fail!";
         return 1;

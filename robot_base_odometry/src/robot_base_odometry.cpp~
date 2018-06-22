@@ -1,0 +1,50 @@
+//
+// Created by leo on 18-6-2.
+//
+
+#include "robot_base_odometry.h"
+
+RobotBaseOdometry::RobotBaseOdometry(float wheel_radius, float base_width, float base_length, int deceleration_radio, int encoder_lines):
+    kWheelRadius(wheel_radius),kBaseWidth(base_width),kBaseLength(base_length),kDecelerationRatio(deceleration_radio),kEncoderLines(encoder_lines)
+{
+    encoder_sub = node.subscribe("NMotionCtrlTopic/EncoderCount",1000,&RobotBaseOdometry::EncoderCallBack,this);
+
+
+    T = 2*M_PI*kWheelRadius/(kDecelerationRatio*kEncoderLines*4);
+    K = kBaseLength+kBaseWidth;
+}
+
+void RobotBaseOdometry::EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_EncoderCount_msgConstPtr &Msg)
+{
+    if(Msg->isCommunicationOK)
+    {
+        Vector4f encoder,distance;
+        Vector3f result;
+        //这里要调整顺序
+        encoder[0] = Msg->encoder2Count;
+        encoder[1] = Msg->encoder3Count;
+        encoder[2] = Msg->encoder4Count;
+        encoder[3] = Msg->encoder1Count;
+
+        for(int i=0; i<4; i++)
+        {
+            distance[i] = encoder[i] * T;
+        }
+
+        MatrixXf F(3,4);
+        F <<  1/4,     1/4,     1/4,     1/4,
+             -1/4,     1/4,    -1/4,     1/4,
+             -1/(4*K),-1/(4*K), 1/(4*K), 1/(4*K);
+
+        result = F*distance;
+        cout<<result<<endl;
+    }
+}
+
+int main(int argc, char** argv)
+{
+    ros::init(argc,argv,"robot_base_odometry");
+    RobotBaseOdometry RobotBaseOdometry(203.2,595,479,32,2500);
+    return 0;
+}
+

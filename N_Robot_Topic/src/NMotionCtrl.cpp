@@ -16,16 +16,25 @@
 #include "N_Robot_Topic/NMotionCtrlTopic_SetInstantVelocity_msg.h"
 #include "N_Robot_Topic/NMotionCtrlTopic_UltrasonicData_msg.h"
 #include "N_Robot_Topic/NMotionCtrlTopic_UltrasonicStatus_msg.h"
+#include "N_Robot_Topic/NMotionCtrlTopic_BatteryVoltage_msg.h"
+#include "N_Robot_Topic/NMotionCtrlTopic_ClearEncoderCount_msg.h"
+
 #include "UserDefine.h"
 #include <geometry_msgs/Twist.h>
 #include<math.h>
-#include<unistd.h>
+#include<sys/time.h>
+#include<iostream>
 
 
-#define PI 3.1415926
+
 UartNMotion nMotionUart;
 bool g_isCpuLittleEndian;
+bool isAbleCommunication=true;
+long time_BetweenDataPackage=0;
+long time_PublishGeoTwistVelocity=0;//ms
+long gTimeCurrentSecWhenOpenDevice=0;
 
+long GetNowTime(void);
 
 //bool ReadDevInfo(N_Robot::NMotionCtrl_ReadDevInfo_srv::Request &req,N_Robot::NMotionCtrl_ReadDevInfo_srv::Response &res){
 //    int nErr;
@@ -1045,8 +1054,7 @@ void FucReadMotionStatus(unsigned char* ac,string &strErr,ros::Publisher &msgPub
         msg.u8CrtMotionBufAddr=ac[4];
         msg.u8CmdBufCnt=ac[5];
         msg.u8CrtCmdBufAddr=ac[6];
-    }else
-    {//false
+    }else{//false
         msg.isCommunicationOK=false;
         msg.u8MotionStatus=0;
         msg.u8SysErrStatus=0;
@@ -1055,6 +1063,7 @@ void FucReadMotionStatus(unsigned char* ac,string &strErr,ros::Publisher &msgPub
         msg.u8CrtMotionBufAddr=0;
         msg.u8CmdBufCnt=0;
         msg.u8CrtCmdBufAddr=0;
+        cout<<strErr<<endl;
     }
     msgPub.publish(msg);
     return ;
@@ -1091,12 +1100,12 @@ void FucReadUltrasonicData(unsigned char* ac,string &strErr,ros::Publisher &msgP
             tempUnion16_6.u8[1]=ac[10];
             tempUnion16_6.u8[0]=ac[11];
         }
-        msg.ultrasonic1Data=tempUnion16_1.u16;
-        msg.ultrasonic2Data=tempUnion16_2.u16;
-        msg.ultrasonic3Data=tempUnion16_3.u16;
-        msg.ultrasonic4Data=tempUnion16_4.u16;
-        msg.ultrasonic5Data=tempUnion16_5.u16;
-        msg.ultrasonic6Data=tempUnion16_6.u16;
+        msg.ultrasonic1Data=(u_int16_t)(((float)tempUnion16_1.u16)/5.8);
+        msg.ultrasonic2Data=(u_int16_t)(((float)tempUnion16_2.u16)/5.8);
+        msg.ultrasonic3Data=(u_int16_t)(((float)tempUnion16_3.u16)/5.8);
+        msg.ultrasonic4Data=(u_int16_t)(((float)tempUnion16_4.u16)/5.8);
+        msg.ultrasonic5Data=(u_int16_t)(((float)tempUnion16_5.u16)/5.8);
+        msg.ultrasonic6Data=(u_int16_t)(((float)tempUnion16_6.u16)/5.8);
     }else{//false
         msg.isCommunicationOK=false;
         msg.ultrasonic1Data=0;
@@ -1127,6 +1136,26 @@ void FucReadUltrasonicStatus(unsigned char* ac,string &strErr,ros::Publisher &ms
         msg.ultrasonic4Status=0;
         msg.ultrasonic5Status=0;
         msg.ultrasonic6Status=0;
+    }
+    msgPub.publish(msg);
+    return ;
+}
+
+void FucReadBatteryVoltage(unsigned char* ac,string &strErr,ros::Publisher &msgPub,N_Robot_Topic::NMotionCtrlTopic_BatteryVoltage_msg &msg){
+    Union16 tempUnion16;
+    if(nMotionUart.ReadBatteryVoltage(ac,strErr)==0){//true
+        msg.isCommunicationOK=true;
+        if(g_isCpuLittleEndian){
+            tempUnion16.u8[0]=ac[0];
+            tempUnion16.u8[1]=ac[1];
+        }else{
+            tempUnion16.u8[1]=ac[0];
+            tempUnion16.u8[0]=ac[1];
+        }
+        msg.batteryVoltage=((float_t)tempUnion16.u16)/10;
+    }else{//false
+        msg.isCommunicationOK=false;
+        msg.batteryVoltage=48;
     }
     msgPub.publish(msg);
     return ;
@@ -1181,6 +1210,7 @@ void FucReadEncoderCount(unsigned char* ac,string &strErr,ros::Publisher &msgPub
         msg.encoder2Count=0;
         msg.encoder3Count=0;
         msg.encoder4Count=0;
+        cout<<strErr<<endl;
     }
     msgPub.publish(msg);
     return ;
@@ -1212,19 +1242,30 @@ void SetInstantVelocityCallback(const N_Robot_Topic::NMotionCtrlTopic_SetInstant
         ac[5]=union16.u8[0];
     }
     if(nMotionUart.SetInstantVelocity(ac,strErr)==0){
-        ROS_INFO("set the velocity..");
+       // ROS_INFO("set the velocity..");
     }else{
         ROS_ERROR("Can't set the velocity!Maybe the conmmunication is not OK!");
     }
 }
 
-void GeoTwistSetInstantVelocityCallback(const geometry_msgs::Twist::ConstPtr& msg){
+void GeoTwistSetInstantVelocityCallback(const geometry_msgs::Twist::ConstPtr& msgPrimary){
     Union16 union16;
     unsigned char ac[50];
     string strErr;
     int16_t s16DirectionAngle;
     u_int16_t u16LinearVelocity;
     int16_t s16AngularVelocity;
+
+    isAbleCommunication=false;
+
+   // ROS_INFO("the vec is %f",msgPrimary->angular.z);
+    geometry_msgs::Twist* msg=new geometry_msgs::Twist;
+    msg->linear.x=msgPrimary->linear.x;
+    msg->linear.y=msgPrimary->linear.y*(-1);
+    msg->linear.z=msgPrimary->linear.z;
+    msg->angular.x=msgPrimary->angular.x;
+    msg->angular.y=msgPrimary->angular.y;
+    msg->angular.z=msgPrimary->angular.z;
 
     if((msg->linear.x>=0)&&(msg->linear.y<0)){
         //s16DirectionAngle=(int16_t)(atan(msg->linear.x/((-1)*msg->linear.y))*180*100/PI);
@@ -1249,7 +1290,7 @@ void GeoTwistSetInstantVelocityCallback(const geometry_msgs::Twist::ConstPtr& ms
     u16LinearVelocity=(u_int16_t)(sqrt((msg->linear.x*msg->linear.x)+(msg->linear.y*msg->linear.y))*10000);
     s16AngularVelocity=msg->angular.z*180*100/PI;
 
-    ROS_INFO("%d,%d,%d",s16DirectionAngle,u16LinearVelocity,s16AngularVelocity);
+    //ROS_INFO("%d,%d,%d",s16DirectionAngle,u16LinearVelocity,s16AngularVelocity);
 
     if(g_isCpuLittleEndian){
         union16.s16=s16DirectionAngle;
@@ -1273,19 +1314,54 @@ void GeoTwistSetInstantVelocityCallback(const geometry_msgs::Twist::ConstPtr& ms
         ac[5]=union16.u8[0];
     }
     if(nMotionUart.SetInstantVelocity(ac,strErr)==0){
-        ROS_INFO("set the velocity..");
+       // ROS_INFO("set the velocity..");
     }else{
         ROS_ERROR("Can't set the velocity!Maybe the conmmunication is not OK!");
     }
+    delete msg;
+    time_BetweenDataPackage=time_PublishGeoTwistVelocity=GetNowTime();
+}
+
+void ClearEncoderCountCallback(const N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg::ConstPtr& msg){
+    Union16 union16;
+    unsigned char ac[50];
+    string strErr;
+    if(msg->command==true){
+        if(nMotionUart.ClearEncoderCount(ac,strErr)==0){
+
+        }else {
+           // ROS_ERROR("Can't clear the encoder count!");
+        }
+    }else{
+        return ;
+    }
+    return ;
+}
+
+struct timeval timeVal1;
+struct timezone timeZone;
+
+long GetNowTime(void){
+    long time;//ms
+    gettimeofday(&timeVal1,NULL);
+    time=(timeVal1.tv_sec-gTimeCurrentSecWhenOpenDevice)*1000+timeVal1.tv_usec/1000;
+    return time;//ms
 }
 
 int main(int argc,char **argv){
-    u_int16_t msCount=0;
+    gettimeofday(&timeVal1,NULL);
+    gTimeCurrentSecWhenOpenDevice=timeVal1.tv_sec;
 
     unsigned char ac[100];
     string strErr;
     string strPara1;
     int nErr;
+    long time_PublishMotionStatus=0,//ms
+            time_PublishUltrasonicData=0,
+            time_PublishUltrasonicStatus=0,
+            time_PublishEncoderCount=0,
+            time_PublishBatteryVoltage=0;
+
     //judge the cup little endian?
     Union16  tempUnion16;
     tempUnion16.u16=0x0001;
@@ -1326,127 +1402,77 @@ int main(int argc,char **argv){
     }
     nMotionUart.ClearRcvBuf();
     //**
-    ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
-
-    ros::Publisher msgPubMotionStatus=n.advertise<N_Robot_Topic::NMotionCtrlTopic_MotionStatus_msg>("NMotionCtrlTopic/MotionStatus",1000);
+    ros::Publisher msgPubMotionStatus=n.advertise<N_Robot_Topic::NMotionCtrlTopic_MotionStatus_msg>("NMotionCtrlTopic/MotionStatus",2);
     ROS_INFO("topic NMotionCtrlTopic/MotionStatus OK.");
-    ros::Publisher msgPubUltrasonicData=n.advertise<N_Robot_Topic::NMotionCtrlTopic_UltrasonicData_msg>("NMotionCtrlTopic/UltrasonicData",1000);
+    ros::Publisher msgPubUltrasonicData=n.advertise<N_Robot_Topic::NMotionCtrlTopic_UltrasonicData_msg>("NMotionCtrlTopic/UltrasonicData",2);
     ROS_INFO("topic NMotionCtrlTopic/UltrasonicData OK.");
-    ros::Publisher msgPubUltrasonicStatus=n.advertise<N_Robot_Topic::NMotionCtrlTopic_UltrasonicStatus_msg>("NMotionCtrlTopic/UltrasonicStatus",1000);
+    ros::Publisher msgPubUltrasonicStatus=n.advertise<N_Robot_Topic::NMotionCtrlTopic_UltrasonicStatus_msg>("NMotionCtrlTopic/UltrasonicStatus",2);
     ROS_INFO("topic NMotionCtrlTopic/UltrasonicStatus OK.");
-    ros::Publisher msgPubEncoderCount=n.advertise<N_Robot_Topic::NMotionCtrlTopic_EncoderCount_msg>("NMotionCtrlTopic/EncoderCount",1000);
+    ros::Publisher msgPubEncoderCount=n.advertise<N_Robot_Topic::NMotionCtrlTopic_EncoderCount_msg>("NMotionCtrlTopic/EncoderCount",2);
     ROS_INFO("topic NMotionCtrlTopic/EncoderCount OK.");
-    ros::Subscriber msgSubSetInstantVelocity=n.subscribe("NMotionCtrlTopic/SetInstantVelocity",1000,SetInstantVelocityCallback);
+    ros::Publisher msgPubBatteryVoltage=n.advertise<N_Robot_Topic::NMotionCtrlTopic_BatteryVoltage_msg>("NMotionCtrlTopic/BatteryVoltage",2);
+    ROS_INFO("topic NMotionCtrlTopic/BatteryVoltage OK.");
+
+    ros::Subscriber msgSubSetInstantVelocity=n.subscribe("NMotionCtrlTopic/SetInstantVelocity",2,SetInstantVelocityCallback);
     ROS_INFO("topic NMotionCtrlTopic/SetInstantVelocity OK.");
-    ros::Subscriber msgSubRosSetInstantVelocity=n.subscribe("NMotionCtrlTopic/GeoTwistSetInstantVelocity",1000,GeoTwistSetInstantVelocityCallback);
+    ros::Subscriber msgSubRosSetInstantVelocity=n.subscribe("NMotionCtrlTopic/GeoTwistSetInstantVelocity",2,GeoTwistSetInstantVelocityCallback);
     ROS_INFO("topic NMotionCtrlTopic/GeoTwistSetInstantVelocity OK.");
+    ros::Subscriber msgSubClearEncoderCount=n.subscribe("NMotionCtrlTopic/ClearEncoderCount",2,ClearEncoderCountCallback);
+    ROS_INFO("topic NMotionCtrlTopic/ClearEncoderCount OK.");
 
     N_Robot_Topic::NMotionCtrlTopic_MotionStatus_msg motionStatusMsg;
     N_Robot_Topic::NMotionCtrlTopic_UltrasonicData_msg ultrasonicDataMsg;
     N_Robot_Topic::NMotionCtrlTopic_UltrasonicStatus_msg ultrasonicStatusMsg;
     N_Robot_Topic::NMotionCtrlTopic_EncoderCount_msg encoderCountMsg;
+    N_Robot_Topic::NMotionCtrlTopic_BatteryVoltage_msg batteryVoltageMsg;
 
-    ros::Rate loopRate(80);
-    int count=0;
-    while(ros::ok()){
- #if 1
-        if((++msCount)==timeOfPublish)
-        {
+    ros::Rate loopRate(1000);
+    usleep(5000000);
+    time_BetweenDataPackage=GetNowTime();
+    //ROS_INFO("The current time is %ld (ms)",time_BetweenDataPackage);
+    ROS_INFO("Robot Starts Working!");
 
-            msCount=0;
-
-
-
-            FucReadMotionStatus(ac,strErr,msgPubMotionStatus,motionStatusMsg);
-            ros::spinOnce();
-            usleep(1000);
-            FucReadUltrasonicData(ac,strErr,msgPubUltrasonicData,ultrasonicDataMsg);
-           // ros::spinOnce();
-            usleep(1000);
-            FucReadUltrasonicStatus(ac,strErr,msgPubUltrasonicStatus,ultrasonicStatusMsg);
-            usleep(1000);
+    while(ros::ok()){//the  more front "front" means higher priority
+        if((isAbleCommunication==true) && ((GetNowTime()-time_PublishEncoderCount)>=TIME_FREQ_ENCODER_COUNT)){
+            isAbleCommunication=false;
             FucReadEncoderCount(ac,strErr,msgPubEncoderCount,encoderCountMsg);
+            time_BetweenDataPackage=time_PublishEncoderCount=GetNowTime();
+        }
+
+        if((isAbleCommunication==true) &&((GetNowTime()-time_PublishGeoTwistVelocity)>=TIME_FREQ_GEOTWIST) ){
             ros::spinOnce();
         }
-#endif
-        ros::spinOnce();
-        usleep(1000);
-        loopRate.sleep();
-    }
 
-//    ros::ServiceServer serReadDevInfo = n.advertiseService("NMotionCtrl/ReadDevInfo",ReadDevInfo);
-//    ROS_INFO("advertise service ReadDevInfo OK.");
-//    ros::ServiceServer serReadVersion = n.advertiseService("NMotionCtrl/ReadVersion",ReadVersion);
-//    ROS_INFO("advertise service ReadVersion OK.");
-//    ros::ServiceServer serReboot = n.advertiseService("NMotionCtrl/Reboot",Reboot);
-//    ROS_INFO("advertise service Reboot OK.");
-//    ros::ServiceServer serReadMotionStatus = n.advertiseService("NMotionCtrl/ReadMotionStatus",ReadMotionStatus);
-//    ROS_INFO("advertise service ReadMotionStatus OK.");
-//    ros::ServiceServer serResetAllMotorDriver = n.advertiseService("NMotionCtrl/ResetAllMotorDriver",ResetAllMotorDriver);
-//    ROS_INFO("advertise service ResetAllMotorDriver OK.");
-//    ros::ServiceServer serClearMotionBuff = n.advertiseService("NMotionCtrl/ClearMotionBuff",ClearMotionBuff);
-//    ROS_INFO("advertise service ClearMotionBuff OK.");
-//    ros::ServiceServer serClearErrFlag = n.advertiseService("NMotionCtrl/ClearErrFlag",ClearErrFlag);
-//    ROS_INFO("advertise service ClearErrFlag OK.");
-//    ros::ServiceServer serStartMotion = n.advertiseService("NMotionCtrl/StartMotion",StartMotion);
-//    ROS_INFO("advertise service StartMotion OK.");
-//    ros::ServiceServer serSuspendMotion = n.advertiseService("NMotionCtrl/SuspendMotion",SuspendMotion);
-//    ROS_INFO("advertise service SuspendMotion OK.");
-//    ros::ServiceServer serContinueMotion = n.advertiseService("NMotionCtrl/ContinueMotion",ContinueMotion);
-//    ROS_INFO("advertise service ContinueMotion OK.");
-//    ros::ServiceServer serStopMotion = n.advertiseService("NMotionCtrl/StopMotion",StopMotion);
-//    ROS_INFO("advertise service StopMotion OK.");
-//    ros::ServiceServer serJumpToNextCmd = n.advertiseService("NMotionCtrl/JumpToNextCmd",JumpToNextCmd);
-//    ROS_INFO("advertise service JumpToNextCmd OK.");
-//    ros::ServiceServer serStopMotionAndSetDir = n.advertiseService("NMotionCtrl/StopMotionAndSetDir",StopMotionAndSetDir);
-//    ROS_INFO("advertise service StopMotionAndSetDir OK.");
-//    ros::ServiceServer serSetInstantVelocity = n.advertiseService("NMotionCtrl/SetInstantVelocity",SetInstantVelocity);
-//    ROS_INFO("advertise service SetInstantVelocity OK.");
-//    ros::ServiceServer serSMATSpeedMode = n.advertiseService("NMotionCtrl/SMATSpeedMode",SMATSpeedMode);
-//    ROS_INFO("advertise service SMATSpeedMode OK.");
-//    ros::ServiceServer serCMATSpeedMode = n.advertiseService("NMotionCtrl/CMATSpeedMode",CMATSpeedMode);
-//    ROS_INFO("advertise service CMATSpeedMode OK.");
-//    ros::ServiceServer serDefineMotorSpeed = n.advertiseService("NMotionCtrl/DefineMotorSpeed",DefineMotorSpeed);
-//    ROS_INFO("advertise service DefineMotorSpeed OK.");
-//    ros::ServiceServer serJoyCmdMotion = n.advertiseService("NMotionCtrl/JoyCmdMotion",JoyCmdMotion);
-//    ROS_INFO("advertise service JoyCmdMotion OK.");
-//    ros::ServiceServer serSMATPositionMode = n.advertiseService("NMotionCtrl/SMATPositionMode",SMATPositionMode);
-//    ROS_INFO("advertise service SMATPositionMode OK.");
-//    ros::ServiceServer serSTATPositionMode = n.advertiseService("NMotionCtrl/STATPositionMode",STATPositionMode);
-//    ROS_INFO("advertise service STATPositionMode OK.");
-//    ros::ServiceServer serCMATPositionMode = n.advertiseService("NMotionCtrl/CMATPositionMode",CMATPositionMode);
-//    ROS_INFO("advertise service CMATPositionMode OK.");
-//    ros::ServiceServer serCAATPositionMode = n.advertiseService("NMotionCtrl/CAATPositionMode",CAATPositionMode);
-//    ROS_INFO("advertise service CAATPositionMode OK.");
-//   //kc_new
-//    ros::ServiceServer serSavePara = n.advertiseService("NMotionCtrl/SavePara",SavePara);
-//    ROS_INFO("advertise service SavePara OK.");
-//    ros::ServiceServer serRecoverFactorySet = n.advertiseService("NMotionCtrl/RecoverFactorySet",RecoverFactorySet);
-//    ROS_INFO("advertise service RecoverFactorySet OK.");
-//    ros::ServiceServer serReadSinglePara = n.advertiseService("NMotionCtrl/SReadSinglePara",ReadSinglePara);
-//    ROS_INFO("advertise service ReadSinglePara OK.");
-//    ros::ServiceServer serSetSinglePara = n.advertiseService("NMotionCtrl/SetSinglePara",SetSinglePara);
-//    ROS_INFO("advertise service SetSinglePara OK.");
-//    ros::ServiceServer serSetOrientation = n.advertiseService("NMotionCtrl/SetOrientation",SetOrientation);
-//    ROS_INFO("advertise service SetOrientation OK.");
-//    ros::ServiceServer serWaitForSomeTime = n.advertiseService("NMotionCtrl/WaitForSomeTime",WaitForSomeTime);
-//    ROS_INFO("advertise service WaitForSomeTime OK.");
-//    ros::ServiceServer serCAATSpeedMode = n.advertiseService("NMotionCtrl/CAATSpeedMode",CAATSpeedMode_);
-//    ROS_INFO("advertise service CAATSpeedMode OK.");
-//    ros::ServiceServer serReadBatteryVoltage = n.advertiseService("NMotionCtrl/ReadBatteryVoltage",ReadBatteryVoltage);
-//    ROS_INFO("advertise service ReadBatteryVoltage OK.");
-//    ros::ServiceServer serReadUltrasonicData = n.advertiseService("NMotionCtrl/ReadUltrasonicData",ReadUltrasonicData);
-//    ROS_INFO("advertise service ReadUltrasonicData OK.");
-//    ros::ServiceServer serReadUltrasonicStatus = n.advertiseService("NMotionCtrl/ReadUltrasonicStatus",ReadUltrasonicStatus);
-//    ROS_INFO("advertise service ReadUltrasonicStatus OK.");
-//    ros::ServiceServer serReadMotorVelocity = n.advertiseService("NMotionCtrl/ReadMotorVelocity",ReadMotorVelocity);
-//    ROS_INFO("advertise service ReadMotorVelocity OK.");
-//    ros::ServiceServer serReadEncoderCount = n.advertiseService("NMotionCtrl/ReadEncoderCount",ReadEncoderCount);
-//    ROS_INFO("advertise service ReadEncoderCount OK.");
-//    ros::ServiceServer serClearEncoderCount = n.advertiseService("NMotionCtrl/ClearEncoderCount",ClearEncoderCount);
-//    ROS_INFO("advertise service ClearEncoderCount OK.");
-//    //
-//    ros::spin();
-//    //**
-//    return 0;
+        if((isAbleCommunication==true) && ((GetNowTime()-time_PublishMotionStatus))>=TIME_FREQ_MOTION_STATUS){
+            isAbleCommunication=false;
+            FucReadMotionStatus(ac,strErr,msgPubMotionStatus,motionStatusMsg);
+            time_BetweenDataPackage=time_PublishMotionStatus=GetNowTime();
+        }
+
+        if(isAbleCommunication==true && (GetNowTime()-time_PublishUltrasonicData)>=TIME_FREQ_ULTRASONIC_DATA){
+            isAbleCommunication=false;
+            FucReadUltrasonicData(ac,strErr,msgPubUltrasonicData,ultrasonicDataMsg);
+            time_BetweenDataPackage=time_PublishUltrasonicData=GetNowTime();
+        }
+
+        if(isAbleCommunication==true && (GetNowTime()-time_PublishUltrasonicStatus)>=TIME_FREQ_ULTRASONIC_STATUS){
+            isAbleCommunication=false;
+            FucReadUltrasonicStatus(ac,strErr,msgPubUltrasonicStatus,ultrasonicStatusMsg);
+            time_BetweenDataPackage=time_PublishUltrasonicStatus=GetNowTime();
+        }
+
+        if(isAbleCommunication==true && (GetNowTime()-time_PublishBatteryVoltage)>=TIME_FREQ_BATTERY_VOLTAGE){
+            isAbleCommunication=false;
+            FucReadBatteryVoltage(ac,strErr,msgPubBatteryVoltage,batteryVoltageMsg);
+            time_BetweenDataPackage=time_PublishBatteryVoltage=GetNowTime();
+        }
+
+        if((isAbleCommunication==false) && ((GetNowTime()-time_BetweenDataPackage)>=TIME_BETWEEN_DATAPACKAGE)){
+            isAbleCommunication=true;
+        }
+        usleep(200);
+    }
+    //  ros::spinOnce();
+    //loopRate.sleep();
+    return 0;
 }

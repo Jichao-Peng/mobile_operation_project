@@ -1,8 +1,0 @@
-prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
-
-Name: ur_driver
-Description: Description of ur_driver
-Version: 1.1.11
-Cflags: -I/home/robot2/catkin_ws/src/cmake-build-debug/devel/include
-Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
-Requires: dynamic_reconfigure

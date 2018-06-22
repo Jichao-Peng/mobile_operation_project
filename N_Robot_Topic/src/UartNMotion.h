@@ -1,6 +1,7 @@
 #ifndef UARTNMotion_H
 #define UARTNMotion_H
 #include "UARTDev.h"
+#include<sys/types.h>
 //#include <iostream>
 #include <string>
   using namespace std;
@@ -42,7 +43,6 @@ public:
     int CAATPositionMode(unsigned char  acData[],string &strErr);
     int JoyCmdMotion(unsigned char  acData[],string &strErr);
 //kc_new
-
     int SavePara(unsigned char  acData[],string &strErr);
     int ReadSinglePara(unsigned char  acData[],string &strErr);
     int RecoverFactorySet(unsigned char  acData[],string &strErr);
@@ -58,6 +58,9 @@ public:
     int ClearEncoderCount(unsigned char  acData[],string &strErr);
 private:
     bool isCpuLittleEndian;
+    enum ReceiveWaitTime{
+      RECEIVE_WAIT_TIME=13000,
+    };
 
 };
 
