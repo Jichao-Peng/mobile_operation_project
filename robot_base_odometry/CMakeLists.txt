@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   nav_msgs
   N_Robot_Topic
   N_Robot
+  tf
 )
 
 find_package(Boost REQUIRED COMPONENTS system)

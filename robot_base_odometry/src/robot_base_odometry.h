@@ -10,6 +10,7 @@
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include <nav_msgs/Odometry.h>
+#include <tf/transform_broadcaster.h>
 #include <N_Robot_Topic/NMotionCtrlTopic_EncoderCount_msg.h>//为嘛是红色我不知道，感觉应该是包的名字大写的原因
 
 using namespace std;
@@ -23,7 +24,11 @@ public:
 private:
     ros::NodeHandle node;
     ros::Subscriber encoder_sub;
+    ros::Publisher odometry_pub;
     nav_msgs::Odometry odometry;
+    ros::Time current_time,previous_time;
+    tf::TransformBroadcaster odometry_broadcaster;
+    Vector3d current_base_distance,previous_base_distance,current_base_velocity;
 
     void EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_EncoderCount_msgConstPtr &Msg);
 

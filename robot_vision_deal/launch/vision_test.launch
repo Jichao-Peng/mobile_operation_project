@@ -1,0 +1,10 @@
+<launch>
+
+	<node name="robot_vision_deal" pkg="robot_vision_deal" type="robot_vision_node" output="screen" /> 
+
+	<include file="$(find leo_test)/sr300_zr300_nodelet_multiple_cameras.launch" />
+
+	<node name="rviz" pkg="rviz" type="rviz" />
+
+
+</launch>

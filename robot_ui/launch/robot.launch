@@ -1,0 +1,10 @@
+<launch>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_ui)/config.rviz" output="screen"/>
+
+<node name="NMotionCtrlTopic" pkg="N_Robot_Topic" type="NMotionCtrl_X64_Topic" args="/dev/ttyUSB0"/>
+
+<node name="robot_base_odometry" pkg="robot_base_odometry" type="robot_base_odometry_node" output="screen"/>
+
+
+</launch>
