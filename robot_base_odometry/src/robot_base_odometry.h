@@ -28,7 +28,8 @@ private:
     nav_msgs::Odometry odometry;
     ros::Time current_time,previous_time;
     tf::TransformBroadcaster odometry_broadcaster;
-    Vector3d current_base_distance,previous_base_distance,current_base_velocity;
+    Vector3d base_distance,base_velocity,base_distance_diff;
+    Vector4d current_encoder,previous_encoder,encoder_diff;
 
     void EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_EncoderCount_msgConstPtr &Msg);
 

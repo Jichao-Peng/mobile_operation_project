@@ -1,0 +1,8 @@
+prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
+
+Name: rplidar_ros
+Description: Description of rplidar_ros
+Version: 1.5.7
+Cflags: 
+Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
+Requires: 

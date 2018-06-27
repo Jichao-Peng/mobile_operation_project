@@ -1,0 +1,144 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_423a7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_423a7.dir/build.make CMakeFiles/cmTC_423a7.dir/build
+make[1]: Entering directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_423a7.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_423a7.dir/CheckSymbolExists.c.o   -c /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_423a7
+/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_423a7.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_423a7.dir/CheckSymbolExists.c.o  -o cmTC_423a7 -rdynamic 
+CMakeFiles/cmTC_423a7.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_423a7] Error 1
+make[1]: Leaving directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [cmTC_423a7/fast] Error 2
+
+File /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_82292/fast"
+/usr/bin/make -f CMakeFiles/cmTC_82292.dir/build.make CMakeFiles/cmTC_82292.dir/build
+make[1]: Entering directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_82292.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_82292.dir/CheckFunctionExists.c.o   -c /home/robot2/Downloads/clion-2017.1.3/bin/cmake/share/cmake-3.7/Modules/CheckFunctionExists.c
+Linking C executable cmTC_82292
+/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82292.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_82292.dir/CheckFunctionExists.c.o  -o cmTC_82292 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_82292] Error 1
+make[1]: Leaving directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [cmTC_82292/fast] Error 2
+
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8921b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8921b.dir/build.make CMakeFiles/cmTC_8921b.dir/build
+make[1]: Entering directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8921b.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_8921b.dir/CheckSymbolExists.cxx.o -c /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^
+make[1]: *** [CMakeFiles/cmTC_8921b.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [cmTC_8921b/fast] Error 2
+
+File /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_00aee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_00aee.dir/build.make CMakeFiles/cmTC_00aee.dir/build
+make[1]: Entering directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_00aee.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_00aee.dir/CheckSymbolExists.cxx.o -c /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^
+make[1]: *** [CMakeFiles/cmTC_00aee.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [cmTC_00aee/fast] Error 2
+
+File /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_171e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_171e2.dir/build.make CMakeFiles/cmTC_171e2.dir/build
+make[1]: Entering directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_171e2.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_171e2.dir/CheckSymbolExists.cxx.o -c /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^
+make[1]: *** [CMakeFiles/cmTC_171e2.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [cmTC_171e2/fast] Error 2
+
+File /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
