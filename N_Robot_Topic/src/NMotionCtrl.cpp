@@ -1415,7 +1415,7 @@ int main(int argc,char **argv){
 
     ros::Subscriber msgSubSetInstantVelocity=n.subscribe("NMotionCtrlTopic/SetInstantVelocity",2,SetInstantVelocityCallback);
     ROS_INFO("topic NMotionCtrlTopic/SetInstantVelocity OK.");
-    ros::Subscriber msgSubRosSetInstantVelocity=n.subscribe("NMotionCtrlTopic/GeoTwistSetInstantVelocity",2,GeoTwistSetInstantVelocityCallback);
+    ros::Subscriber msgSubRosSetInstantVelocity=n.subscribe("/cmd_vel",2,GeoTwistSetInstantVelocityCallback);
     ROS_INFO("topic NMotionCtrlTopic/GeoTwistSetInstantVelocity OK.");
     ros::Subscriber msgSubClearEncoderCount=n.subscribe("NMotionCtrlTopic/ClearEncoderCount",2,ClearEncoderCountCallback);
     ROS_INFO("topic NMotionCtrlTopic/ClearEncoderCount OK.");

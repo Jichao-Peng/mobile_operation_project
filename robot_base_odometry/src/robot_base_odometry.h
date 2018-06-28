@@ -12,6 +12,7 @@
 #include <nav_msgs/Odometry.h>
 #include <tf/transform_broadcaster.h>
 #include <N_Robot_Topic/NMotionCtrlTopic_EncoderCount_msg.h>//为嘛是红色我不知道，感觉应该是包的名字大写的原因
+#include <N_Robot_Topic/NMotionCtrlTopic_ClearEncoderCount_msg.h>
 
 using namespace std;
 using namespace Eigen;
@@ -25,6 +26,7 @@ private:
     ros::NodeHandle node;
     ros::Subscriber encoder_sub;
     ros::Publisher odometry_pub;
+    ros::Publisher clear_pub;
     nav_msgs::Odometry odometry;
     ros::Time current_time,previous_time;
     tf::TransformBroadcaster odometry_broadcaster;
@@ -42,6 +44,7 @@ private:
     double coeffiecient_k;//用于记录底盘长宽之和的系数
     double coeffiecient_t;//用于记录码盘值和轮子走过的距离之间的转化系数
     MatrixXd matrix_f;
+
 };
 
 

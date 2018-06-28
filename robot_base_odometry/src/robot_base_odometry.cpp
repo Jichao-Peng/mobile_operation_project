@@ -9,6 +9,7 @@ RobotBaseOdometry::RobotBaseOdometry(double wheel_radius, double base_width, dou
 {
     encoder_sub = node.subscribe("/NMotionCtrlTopic/EncoderCount",1000,&RobotBaseOdometry::EncoderCallBack,this);
     odometry_pub = node.advertise<nav_msgs::Odometry>("odom", 50);
+    clear_pub = node.advertise<N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg>("/NMotionCtrlTopic/ClearEncoderCount",50);
 
     coeffiecient_t = 2*M_PI*kWheelRadius/(kDecelerationRatio*kEncoderLines*4);
     coeffiecient_k = (kBaseLength+kBaseWidth)/2;
@@ -28,6 +29,7 @@ RobotBaseOdometry::RobotBaseOdometry(double wheel_radius, double base_width, dou
 
 void RobotBaseOdometry::EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_EncoderCount_msgConstPtr &Msg)
 {
+
     if(Msg->isCommunicationOK)
     {
         current_time = ros::Time::now();
@@ -85,7 +87,7 @@ void RobotBaseOdometry::EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_En
         odometry.twist.twist.angular.z = base_velocity[2];
         odometry_pub.publish(odometry);
 
-        cout<<base_distance<<endl<<endl;
+        //cout<<base_distance<<endl<<endl;
         //cout<<current_base_velocity<<endl<<endl;
     }
 }
