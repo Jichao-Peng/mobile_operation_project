@@ -78,28 +78,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -133,6 +111,28 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles /home/robot2/catkin_ws/src/cmake-build-debug/rplidar_ros/CMakeFiles/progress.marks
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+rplidar_ros/CMakeFiles/node1.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/node1.dir/rule
+.PHONY : rplidar_ros/CMakeFiles/node1.dir/rule
+
+# Convenience name for target.
+node1: rplidar_ros/CMakeFiles/node1.dir/rule
+
+.PHONY : node1
+
+# fast build rule for target.
+node1/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/build
+.PHONY : node1/fast
 
 # Convenience name for target.
 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule:
@@ -201,6 +216,7 @@ sdk/src/arch/linux/net_serial.o: sdk/src/arch/linux/net_serial.cpp.o
 
 # target to build an object file
 sdk/src/arch/linux/net_serial.cpp.o:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/arch/linux/net_serial.cpp.o
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o
 .PHONY : sdk/src/arch/linux/net_serial.cpp.o
 
@@ -210,6 +226,7 @@ sdk/src/arch/linux/net_serial.i: sdk/src/arch/linux/net_serial.cpp.i
 
 # target to preprocess a source file
 sdk/src/arch/linux/net_serial.cpp.i:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/arch/linux/net_serial.cpp.i
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.i
 .PHONY : sdk/src/arch/linux/net_serial.cpp.i
 
@@ -219,6 +236,7 @@ sdk/src/arch/linux/net_serial.s: sdk/src/arch/linux/net_serial.cpp.s
 
 # target to generate assembly for a file
 sdk/src/arch/linux/net_serial.cpp.s:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/arch/linux/net_serial.cpp.s
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.s
 .PHONY : sdk/src/arch/linux/net_serial.cpp.s
 
@@ -228,6 +246,7 @@ sdk/src/arch/linux/timer.o: sdk/src/arch/linux/timer.cpp.o
 
 # target to build an object file
 sdk/src/arch/linux/timer.cpp.o:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/arch/linux/timer.cpp.o
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o
 .PHONY : sdk/src/arch/linux/timer.cpp.o
 
@@ -237,6 +256,7 @@ sdk/src/arch/linux/timer.i: sdk/src/arch/linux/timer.cpp.i
 
 # target to preprocess a source file
 sdk/src/arch/linux/timer.cpp.i:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/arch/linux/timer.cpp.i
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.i
 .PHONY : sdk/src/arch/linux/timer.cpp.i
 
@@ -246,6 +266,7 @@ sdk/src/arch/linux/timer.s: sdk/src/arch/linux/timer.cpp.s
 
 # target to generate assembly for a file
 sdk/src/arch/linux/timer.cpp.s:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/arch/linux/timer.cpp.s
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.s
 .PHONY : sdk/src/arch/linux/timer.cpp.s
 
@@ -255,6 +276,7 @@ sdk/src/hal/thread.o: sdk/src/hal/thread.cpp.o
 
 # target to build an object file
 sdk/src/hal/thread.cpp.o:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/hal/thread.cpp.o
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o
 .PHONY : sdk/src/hal/thread.cpp.o
 
@@ -264,6 +286,7 @@ sdk/src/hal/thread.i: sdk/src/hal/thread.cpp.i
 
 # target to preprocess a source file
 sdk/src/hal/thread.cpp.i:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/hal/thread.cpp.i
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.i
 .PHONY : sdk/src/hal/thread.cpp.i
 
@@ -273,6 +296,7 @@ sdk/src/hal/thread.s: sdk/src/hal/thread.cpp.s
 
 # target to generate assembly for a file
 sdk/src/hal/thread.cpp.s:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/hal/thread.cpp.s
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.s
 .PHONY : sdk/src/hal/thread.cpp.s
 
@@ -282,6 +306,7 @@ sdk/src/rplidar_driver.o: sdk/src/rplidar_driver.cpp.o
 
 # target to build an object file
 sdk/src/rplidar_driver.cpp.o:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/rplidar_driver.cpp.o
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o
 .PHONY : sdk/src/rplidar_driver.cpp.o
 
@@ -291,6 +316,7 @@ sdk/src/rplidar_driver.i: sdk/src/rplidar_driver.cpp.i
 
 # target to preprocess a source file
 sdk/src/rplidar_driver.cpp.i:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/rplidar_driver.cpp.i
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.i
 .PHONY : sdk/src/rplidar_driver.cpp.i
 
@@ -300,6 +326,7 @@ sdk/src/rplidar_driver.s: sdk/src/rplidar_driver.cpp.s
 
 # target to generate assembly for a file
 sdk/src/rplidar_driver.cpp.s:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/sdk/src/rplidar_driver.cpp.s
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.s
 .PHONY : sdk/src/rplidar_driver.cpp.s
 
@@ -357,6 +384,33 @@ src/node.cpp.s:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.s
 .PHONY : src/node.cpp.s
 
+src/node1.o: src/node1.cpp.o
+
+.PHONY : src/node1.o
+
+# target to build an object file
+src/node1.cpp.o:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/src/node1.cpp.o
+.PHONY : src/node1.cpp.o
+
+src/node1.i: src/node1.cpp.i
+
+.PHONY : src/node1.i
+
+# target to preprocess a source file
+src/node1.cpp.i:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/src/node1.cpp.i
+.PHONY : src/node1.cpp.i
+
+src/node1.s: src/node1.cpp.s
+
+.PHONY : src/node1.s
+
+# target to generate assembly for a file
+src/node1.cpp.s:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f rplidar_ros/CMakeFiles/node1.dir/build.make rplidar_ros/CMakeFiles/node1.dir/src/node1.cpp.s
+.PHONY : src/node1.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -365,11 +419,12 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... node1"
 	@echo "... rplidarNodeClient"
 	@echo "... rplidarNode"
 	@echo "... sdk/src/arch/linux/net_serial.o"
@@ -390,6 +445,9 @@ help:
 	@echo "... src/node.o"
 	@echo "... src/node.i"
 	@echo "... src/node.s"
+	@echo "... src/node1.o"
+	@echo "... src/node1.i"
+	@echo "... src/node1.s"
 .PHONY : help
 
 

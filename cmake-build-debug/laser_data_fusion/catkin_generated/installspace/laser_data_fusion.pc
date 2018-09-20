@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: laser_data_fusion
+Description: Description of laser_data_fusion
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

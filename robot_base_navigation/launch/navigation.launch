@@ -13,6 +13,9 @@
 
 
 	<!-- Run a static transform between /laser and /base_link -->
-	<node pkg="tf" type="static_transform_publisher" name="laser_baselink_broadcaster" args="0.335 0.36 0 -0.7853 0 0 /base_link /laser 100" />
+	<!--node pkg="tf" type="static_transform_publisher" name="laser_baselink_broadcaster" args="0.335 0.36 0 -0.7853 0 0 /base_link /laser 100" /-->
+
+
+	<include file="$(find rplidar_ros)/launch/test3.launch">
 
 </launch>

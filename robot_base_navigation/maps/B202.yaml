@@ -1,0 +1,6 @@
+image: B202.pgm
+resolution: 0.05
+origin: [-9.866499996185304, -7.207390499114991, 0]
+occupied_thresh: 0.51
+free_thresh: 0.49
+negate: 0

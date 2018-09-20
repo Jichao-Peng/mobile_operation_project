@@ -4,7 +4,7 @@
  	<node pkg="tf" type="static_transform_publisher" name="laser_baselink_broadcaster" args="0.335 0.36 0 -0.7853 0 0 /base_link /laser 100" />
 
  	<!-- Run a static transform between /odom and /map -->
- 	<node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
+ 	<!--node4 pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /map /odom 100" /-->
 
 	<!-- Run laser -->
 	<include file="$(find rplidar_ros)/launch/test_rplidar.launch" />
@@ -13,7 +13,7 @@
  	<node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
 	<remap from="scan" to="scan1"/>
 	<param name="delta" value="0.1"/>
-	<param name="particles" value="60"/>
+	<param name="particles" value="30"/>
 	<param name="srr" value="0"/>
 	<param name="srt" value="0"/>
 	<param name="str" value="0.05"/>

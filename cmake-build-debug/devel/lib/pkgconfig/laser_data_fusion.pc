@@ -1,0 +1,8 @@
+prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
+
+Name: laser_data_fusion
+Description: Description of laser_data_fusion
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
+Requires: 

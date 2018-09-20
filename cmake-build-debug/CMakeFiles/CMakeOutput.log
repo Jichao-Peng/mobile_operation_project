@@ -620,3 +620,51 @@ int main(int argc, char** argv)
 #endif
 }
 
+Performing C SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_45110/fast"
+/usr/bin/make -f CMakeFiles/cmTC_45110.dir/build.make CMakeFiles/cmTC_45110.dir/build
+make[1]: Entering directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_45110.dir/src.c.o
+/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_45110.dir/src.c.o   -c /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_45110
+/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45110.dir/link.txt --verbose=1
+/usr/bin/cc    -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_45110.dir/src.c.o  -o cmTC_45110 -rdynamic 
+make[1]: Leaving directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+
+Performing C++ SOURCE FILE Test OpenMP_FLAG_DETECTED succeeded with the following output:
+Change Dir: /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_817c6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_817c6.dir/build.make CMakeFiles/cmTC_817c6.dir/build
+make[1]: Entering directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_817c6.dir/src.cxx.o
+/usr/bin/c++     -Wno-deprecated -DOpenMP_FLAG_DETECTED -fopenmp   -o CMakeFiles/cmTC_817c6.dir/src.cxx.o -c /home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_817c6
+/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_817c6.dir/link.txt --verbose=1
+/usr/bin/c++     -Wno-deprecated -DOpenMP_FLAG_DETECTED -fopenmp    CMakeFiles/cmTC_817c6.dir/src.cxx.o  -o cmTC_817c6 -rdynamic 
+make[1]: Leaving directory `/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <omp.h>
+int main() {
+#ifdef _OPENMP
+  return 0;
+#else
+  breaks_on_purpose
+#endif
+}
+

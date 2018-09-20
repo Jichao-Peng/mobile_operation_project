@@ -56,28 +56,16 @@ CMAKE_BINARY_DIR = /home/robot2/catkin_ws/src/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -100,16 +88,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target test
 test:
@@ -132,6 +121,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,51 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-robot_ui/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_ui/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : robot_ui/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_lisp: robot_ui/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_ui/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make robot_ui/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-.PHONY : robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_py: robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-.PHONY : map_msgs_generate_messages_py
-
-# fast build rule for target.
-map_msgs_generate_messages_py/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/build.make robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/build
-.PHONY : map_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-robot_ui/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_ui/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : robot_ui/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_py: robot_ui/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_ui/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make robot_ui/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 robot_ui/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_ui/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
 .PHONY : robot_ui/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
@@ -226,21 +181,6 @@ map_msgs_generate_messages_cpp/fast:
 .PHONY : map_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-robot_ui/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_ui/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : robot_ui/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_cpp: robot_ui/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_ui/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make robot_ui/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 robot_ui/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_ui/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
 .PHONY : robot_ui/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
@@ -254,6 +194,21 @@ map_msgs_generate_messages_lisp: robot_ui/CMakeFiles/map_msgs_generate_messages_
 map_msgs_generate_messages_lisp/fast:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_ui/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make robot_ui/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
 .PHONY : map_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule
+.PHONY : robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+map_msgs_generate_messages_py: robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/rule
+
+.PHONY : map_msgs_generate_messages_py
+
+# fast build rule for target.
+map_msgs_generate_messages_py/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/build.make robot_ui/CMakeFiles/map_msgs_generate_messages_py.dir/build
+.PHONY : map_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 robot_ui/CMakeFiles/robot_ui.dir/rule:
@@ -330,20 +285,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... visualization_msgs_generate_messages_lisp"
-	@echo "... map_msgs_generate_messages_py"
-	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... map_msgs_generate_messages_cpp"
-	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... rebuild_cache"
 	@echo "... map_msgs_generate_messages_lisp"
+	@echo "... map_msgs_generate_messages_py"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... install"
 	@echo "... robot_ui"
 	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... install/local"
 	@echo "... src/moc_robot_ui.o"
 	@echo "... src/moc_robot_ui.i"
 	@echo "... src/moc_robot_ui.s"

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC   -Wno-deprecated -fopenmp -g   -shared -Wl,-soname,libconfig.so -o ../devel/lib/libconfig.so CMakeFiles/config.dir/src/config.cpp.o  -L/home/robot2/catkin_ws/src/jd_vision/lib 

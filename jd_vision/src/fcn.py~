@@ -1,0 +1,229 @@
+#!/usr/bin/env python
+from __future__ import print_function
+from __future__ import absolute_import
+from __future__ import division
+
+import json
+import logging
+import os
+import sys
+import collections
+
+# configure logging
+logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s',
+                    level=logging.INFO,
+                    stream=sys.stdout)
+#ros and cv_bridge
+import roslib
+import sys
+import rospy
+import cv2
+from std_msgs.msg import String
+from cv_bridge import CvBridge, CvBridgeError
+import message_filters
+
+#UR robot
+import roslib; roslib.load_manifest('ur_driver')
+import time
+from sensor_msgs.msg import Image, CameraInfo, JointState 
+from ur_driver.deserializeRT import RobotStateRT 
+from ur_msgs.msg import *
+import time, sys, threading, math
+import copy
+import datetime
+import socket, select
+import struct
+import traceback, code
+import SocketServer
+
+#opencv_bridge package message
+from jd_vision.msg import *
+
+#tensor flow
+import numpy as np
+import scipy as scp
+import scipy.misc
+import imp
+
+sys.path.insert(1, 'incl')
+
+flags.DEFINE_string('logdir', None,
+                    'Path to logdir.')
+flags.DEFINE_string('input_image', None,
+                    'Image to apply KittiSeg.')
+flags.DEFINE_string('output_image', None,
+                    'Image to apply KittiSeg.')
+class Segmentor:
+
+	def __init__(self):
+		rospy.init_node('FCN', anonymous=True)
+		self.pose = [0,0,0,0,0,0]
+
+		#cv_bridge 
+		self.rgb_bridge = CvBridge()
+		self.depth_bridge = CvBridge()
+		self.res_bridge = CvBridge()
+		self.tss = message_filters.ApproximateTimeSynchronizer([message_filters.Subscriber("/camera/rgb/image_rect_color",Image),     #"color"  "depth" for realsense  #"/camera/rgb/image_rect_color"
+														message_filters.Subscriber("/camera/depth_registered/sw_registered/image_rect_raw",Image),   #"/camera/depth_registered/sw_registered/image_rect_raw"
+															message_filters.Subscriber("ur",RobotMsg)],1,0.1)
+		self.tss.registerCallback(self.callback)
+
+	def callback(self,rgb,depth,robot_data):
+		cv_image = self.rgb_bridge.imgmsg_to_cv2(rgb, "rgb8")
+		cv_img_depth = self.depth_bridge.imgmsg_to_cv2(depth, "16UC1")
+		cv2.imshow("Color Image", cv_image)
+		cv2.waitKey(1)
+		print(robot_data.data.tool_vector)
+
+
+	def load_hypes_from_logdir(self,logdir, subdir='model_files', base_path=None):
+		"""Load hypes from the logdir.
+
+		Namely the modules loaded are:
+		input_file, architecture_file, objective_file, optimizer_file
+
+		Parameters
+		----------
+		logdir : string
+		Path to logdir
+
+		Returns
+		-------
+		hypes
+		"""
+		model_dir = os.path.join(logdir, subdir)
+		hypes_fname = os.path.join(model_dir, "hypes.json")
+		with open(hypes_fname, 'r') as f:
+			logging.info("f: %s", f)
+			hypes = json.load(f)
+
+		hypes['dirs']['output_dir'] = os.path.realpath(logdir)
+		hypes['dirs']['image_dir'] = os.path.join(hypes['dirs']['output_dir'],
+													'images')
+
+		if base_path is not None:
+			hypes['dirs']['base_path'] = os.path.realpath(base_path)
+
+		self._add_paths_to_sys(hypes)
+
+		if 'TV_DIR_DATA' in os.environ:
+			data_dir = os.environ['TV_DIR_DATA']
+		else:
+			data_dir = 'DATA'
+
+		hypes['dirs']['data_dir'] = data_dir
+
+		return hypes
+
+	def load_modules_from_logdir(self,logdir, dirname="model_files", postfix=""):
+		"""Load hypes from the logdir.
+
+		Namely the modules loaded are:
+		input_file, architecture_file, objective_file, optimizer_file
+
+		Parameters
+		----------
+		logdir : string
+		Path to logdir
+
+		Returns
+		-------
+		data_input, arch, objective, solver
+		"""
+		model_dir = os.path.join(logdir, dirname)
+		f = os.path.join(model_dir, "data_input.py")
+		# TODO: create warning if file f does not exists
+		data_input = imp.load_source("input_%s" % postfix, f)
+		f = os.path.join(model_dir, "architecture.py")
+		arch = imp.load_source("arch_%s" % postfix, f)
+		f = os.path.join(model_dir, "objective.py")
+		objective = imp.load_source("objective_%s" % postfix, f)
+		f = os.path.join(model_dir, "solver.py")
+		solver = imp.load_source("solver_%s" % postfix, f)
+
+		f = os.path.join(model_dir, "eval.py")
+		eva = imp.load_source("evaluator_%s" % postfix, f)
+		modules = {}
+		modules['input'] = data_input
+		modules['arch'] = arch
+		modules['objective'] = objective
+		modules['solver'] = solver
+		modules['eval'] = eva
+
+		return modules
+
+	def _add_paths_to_sys(self,hypes):
+		"""
+		Add all module dirs to syspath.
+
+		This adds the dirname of all modules to path.
+
+		Parameters
+		----------
+		hypes : dict
+		Hyperparameters
+		"""
+		base_path = hypes['dirs']['base_path']
+		if 'path' in hypes:
+			for path in hypes['path']:
+					path = os.path.realpath(os.path.join(base_path, path))
+					sys.path.insert(1, path)
+		return
+
+	def load_weights(self,checkpoint_dir, sess, saver):
+		"""
+		Load the weights of a model stored in saver.
+
+		Parameters
+		----------
+		checkpoint_dir : str
+		The directory of checkpoints.
+		sess : tf.Session
+		A Session to use to restore the parameters.
+		saver : tf.train.Saver
+
+		Returns
+		-----------
+		int
+		training step of checkpoint
+		"""
+		ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
+		if ckpt and ckpt.model_checkpoint_path:
+			logging.info(ckpt.model_checkpoint_path)
+			file = os.path.basename(ckpt.model_checkpoint_path)
+			checkpoint_path = os.path.join(checkpoint_dir, file)
+			saver.restore(sess, checkpoint_path)
+			return int(file.split('-')[1])
+
+	def build_inference_graph(self,hypes, modules, image):
+		"""Run one evaluation against the full epoch of data.
+
+		Parameters
+		----------
+		hypes : dict
+		Hyperparameters
+		modules : tuble
+		the modules load in utils
+		image : placeholder
+
+		return:
+		graph_ops
+		"""
+		with tf.name_scope("Validation"):
+
+			logits = modules['arch'].inference(hypes, image, train=False)
+
+			decoded_logits = modules['objective'].decoder(hypes, logits,
+														train=False)
+		return decoded_logits
+
+def main(args):
+	s = Segmentor()
+	try:
+		rospy.spin()
+	except KeyboardInterrupt:
+		print("Shutting down")
+	cv2.destroyAllWindows()
+
+if __name__ == '__main__':
+	main(sys.argv)

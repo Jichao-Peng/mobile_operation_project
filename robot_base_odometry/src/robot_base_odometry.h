@@ -44,7 +44,6 @@ private:
     double coeffiecient_k;//用于记录底盘长宽之和的系数
     double coeffiecient_t;//用于记录码盘值和轮子走过的距离之间的转化系数
     MatrixXd matrix_f;
-
 };
 
 

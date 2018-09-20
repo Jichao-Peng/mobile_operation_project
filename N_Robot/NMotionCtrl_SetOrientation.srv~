@@ -1,9 +1,0 @@
-uint8 paraIndex
-uint8 paraData1
-uint8 paraData2
-uint8 paraData3
-uint8 paraData4
-----
-int32  s32ErrCode
-string strErrInfo
-

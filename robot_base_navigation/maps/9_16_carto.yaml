@@ -1,0 +1,6 @@
+image: 9_16_carto.pgm
+resolution: 0.05
+origin: [-12.69338550567627, -6.077669906616212, 0]
+occupied_thresh: 0.51
+free_thresh: 0.49
+negate: 0

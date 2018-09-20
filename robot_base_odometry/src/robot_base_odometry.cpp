@@ -7,9 +7,20 @@
 RobotBaseOdometry::RobotBaseOdometry(double wheel_radius, double base_width, double base_length, int deceleration_radio, int encoder_lines):
     kWheelRadius(wheel_radius),kBaseWidth(base_width),kBaseLength(base_length),kDecelerationRatio(deceleration_radio),kEncoderLines(encoder_lines)
 {
+//    clear_pub = node.advertise<N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg>("/NMotionCtrlTopic/ClearEncoderCount",50);
+//
+//    sleep(3);
+//
+//    N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg clear_msg;
+//    clear_msg.command = 1;
+//    clear_pub.publish(clear_msg);
+//    clear_pub.publish(clear_msg);
+//    clear_pub.publish(clear_msg);
+//
+//    sleep(1);
+
     encoder_sub = node.subscribe("/NMotionCtrlTopic/EncoderCount",1000,&RobotBaseOdometry::EncoderCallBack,this);
     odometry_pub = node.advertise<nav_msgs::Odometry>("odom", 50);
-    clear_pub = node.advertise<N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg>("/NMotionCtrlTopic/ClearEncoderCount",50);
 
     coeffiecient_t = 2*M_PI*kWheelRadius/(kDecelerationRatio*kEncoderLines*4);
     coeffiecient_k = (kBaseLength+kBaseWidth)/2;
@@ -55,6 +66,8 @@ void RobotBaseOdometry::EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_En
         base_distance[1] += delta_y;
         base_distance[2] += delta_theta;
 
+        //cout<<base_distance<<endl<<endl;
+
         //向前赋值
         previous_time = current_time;
         previous_encoder = current_encoder;
@@ -73,6 +86,7 @@ void RobotBaseOdometry::EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_En
         odometry_tf.transform.rotation = odometry_quaternion;
         odometry_broadcaster.sendTransform(odometry_tf);
 
+
         //将odometry发布到odom的topic上
         nav_msgs::Odometry odometry;
         odometry.header.stamp = current_time;
@@ -85,10 +99,20 @@ void RobotBaseOdometry::EncoderCallBack(const N_Robot_Topic::NMotionCtrlTopic_En
         odometry.twist.twist.linear.x = base_velocity[0];
         odometry.twist.twist.linear.y = base_velocity[1];
         odometry.twist.twist.angular.z = base_velocity[2];
+
+        //cout<<odometry.pose.pose<<endl<<endl;
+        cout<<odometry.pose.pose.position.x<<" "
+            <<odometry.pose.pose.position.y<<" "
+            <<odometry.pose.pose.position.z<<" "
+            <<odometry.pose.pose.orientation.x<<" "
+            <<odometry.pose.pose.orientation.y<<" "
+            <<odometry.pose.pose.orientation.z<<" "
+            <<odometry.pose.pose.orientation.w<<" "<<endl;
         odometry_pub.publish(odometry);
 
         //cout<<base_distance<<endl<<endl;
         //cout<<current_base_velocity<<endl<<endl;
+
     }
 }
 
