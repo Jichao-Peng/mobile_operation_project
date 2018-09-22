@@ -39,7 +39,7 @@ private:
 
     void GoalCallBack(const std_msgs::StringConstPtr &msg);
     bool GoalService(robot_base_control::base_goalRequest &req, robot_base_control::base_goalResponse &res);
-    void MoveStateCallBace(const std_msgs::BoolConstPtr &msg);
+    void MoveStateCallBack(const std_msgs::BoolConstPtr &msg);
 
 
     map<string,vector<float> > path;

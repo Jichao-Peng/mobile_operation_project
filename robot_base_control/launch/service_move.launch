@@ -1,0 +1,9 @@
+<launch>
+
+	<node name="NMotionCtrlTopic" pkg="N_Robot_Topic" type="NMotionCtrl_X64_Topic" args="/dev/ttyUSB0" />
+
+	<node name="robot_base_odometry" pkg="robot_base_odometry" type="robot_base_odometry_node"/>
+
+	<node name="robot_base_control" pkg="robot_base_control" type="new_robot_base_control" output="screen"/>  
+
+</launch>

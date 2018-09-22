@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg;/home/robot2/catkin_ws/src/jd_vision/msg/RobotMsg.msg;/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg"
+messages_str = "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg;/home/robot2/catkin_ws/src/jd_vision/msg/RobotMsg.msg;/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg;/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg"
 services_str = ""
 pkg_name = "jd_vision"
 dependencies_str = "std_msgs;sensor_msgs;ur_msgs"

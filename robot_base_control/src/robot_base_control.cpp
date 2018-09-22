@@ -1,6 +1,6 @@
 //
 // Created by leo on 18-9-18.
-//
+///
 
 #include "robot_base_control.h"
 
@@ -8,12 +8,12 @@ RobotBaseControl::RobotBaseControl()
 {
     ReadPosData();
 
-    goal_sub = node.subscribe("base_goal_topic",1000,&RobotBaseControl::GoalCallBack,this);
-    goal_state_pub = node.advertise<std_msgs::Bool>("base_goal_state_topic",50);
+    goal_sub = node.subscribe("base_goal_topic",1000,&RobotBaseControl::GoalCallBack,this);                     //接收到 "base_goal_topic" 后，回调 GoalCallBack
+    goal_state_pub = node.advertise<std_msgs::Bool>("base_goal_state_topic",50);                                //小车到达指定位置时，发布 1 
     goal_ser = node.advertiseService("base_goal_service",&RobotBaseControl::GoalService,this);
     move_cli = node.serviceClient<robot_base_move::base_move>("base_move_service");
-    move_pub = node.advertise<move_base_msgs::MoveBaseGoal>("base_move_topic",50);
-    move_state_sub = node.subscribe("base_move_state_topic",50,&RobotBaseControl::MoveStateCallBace,this);
+    move_pub = node.advertise<move_base_msgs::MoveBaseGoal>("base_move_topic",50);                              //在 GoalCallBack 中， 把string化为MoveBaseGoal发出
+    move_state_sub = node.subscribe("base_move_state_topic",50,&RobotBaseControl::MoveStateCallBack,this);      //msg==1时，即车到达目标时，发1到 base_goal_state_topic，finish_flag=1
     move_base_client = new actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction>("move_base", true);
 
 //****************** 勿删 ******* move_base版 ******* 勿删 *****************************
@@ -43,14 +43,14 @@ void RobotBaseControl::Run()
     }
 }
 
-void RobotBaseControl::MoveStateCallBace(const std_msgs::BoolConstPtr &msg)
+void RobotBaseControl::MoveStateCallBack(const std_msgs::BoolConstPtr &msg)
 {
     if(msg->data == 1)
     {
         cout << "Robot get the goal,Please input the next point" << endl;
         std_msgs::Bool finish_msg;
         finish_msg.data = 1;
-        goal_state_pub.publish(finish_msg);
+        goal_state_pub.publish(finish_msg);                                                                 //发布 1 到 base_goal_state_topic
         finish_flag = true;
     }
 }

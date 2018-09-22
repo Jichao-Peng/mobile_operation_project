@@ -66,6 +66,7 @@ add_message_files(
   Frame.msg
   RobotMsg.msg
   Command.msg
+  SourceFrame.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -186,7 +187,12 @@ add_library(config SHARED src/config.cpp)
 
 add_executable(pcl_bbox src/pcl_bbox.cpp src/config.cpp)
 target_link_libraries(pcl_bbox ${OpenCV_LIBS} ${PCL_LIBRARIES} ${catkin_LIBRARIES})
-add_dependencies(pcl_bbox  ziqi_ur10_generate_message_cpp)
+add_dependencies(pcl_bbox  jd_vision_generate_message_cpp)
+
+#add Synchronizer
+add_executable(Synchronizer src/Synchronizer.cpp)
+target_link_libraries(Synchronizer ${OpenCV_LIBS} ${PCL_LIBRARIES} ${catkin_LIBRARIES})
+add_dependencies(Synchronizer jd_vision_generate_message_cpp)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

@@ -17,8 +17,11 @@ WARNING: Package name "N_Robot_Topic" does not follow the naming conventions. It
 WARNING: Package name "N_Robot" does not follow the naming conventions. It should start witha lower case letter and only contain lower case letters, digits, underscores, and dashes.
 WARNING: Package name "N_Robot_Topic" does not follow the naming conventions. It should start witha lower case letter and only contain lower case letters, digits, underscores, and dashes.
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 27 packages in topological order:
+-- ~~  traversing 36 packages in topological order:
 -- ~~  - test_car
+-- ~~  - turtlebot (metapackage)
+-- ~~  - turtlebot_bringup
+-- ~~  - turtlebot_capabilities
 -- ~~  - universal_robot (metapackage)
 -- ~~  - ur_bringup
 -- ~~  - ur_description
@@ -29,12 +32,15 @@ WARNING: Package name "N_Robot_Topic" does not follow the naming conventions. It
 -- ~~  - laser_data_fusion
 -- ~~  - realtime_tools
 -- ~~  - robot_base_odometry
+-- ~~  - robot_descriptions
 -- ~~  - rplidar_ros
 -- ~~  - rplidar_ros2
 -- ~~  - robot_base_control
 -- ~~  - robot_base_mapping
 -- ~~  - robot_base_move
 -- ~~  - robot_vision_deal
+-- ~~  - turtlebot_teleop
+-- ~~  - ur10_rg2_moveit_config
 -- ~~  - ur_driver
 -- ~~  - ur_modern_driver
 -- ~~  - jd_vision
@@ -44,10 +50,19 @@ WARNING: Package name "N_Robot_Topic" does not follow the naming conventions. It
 -- ~~  - ur5_moveit_config
 -- ~~  - ur_kinematics
 -- ~~  - robot_base_navigation
+-- ~~  - jrc_main
+-- ~~  - ur_control
+-- ~~  - turtlebot_description
 -- ~~  - ziqi_ur10
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- +++ processing catkin package: 'test_car'
 -- ==> add_subdirectory(test_car)
+-- +++ processing catkin metapackage: 'turtlebot'
+-- ==> add_subdirectory(turtlebot/turtlebot)
+-- +++ processing catkin package: 'turtlebot_bringup'
+-- ==> add_subdirectory(turtlebot/turtlebot_bringup)
+-- +++ processing catkin package: 'turtlebot_capabilities'
+-- ==> add_subdirectory(turtlebot/turtlebot_capabilities)
 -- +++ processing catkin metapackage: 'universal_robot'
 -- ==> add_subdirectory(universal_robot/universal_robot)
 -- +++ processing catkin package: 'ur_bringup'
@@ -88,6 +103,8 @@ WARNING: Package name "N_Robot_Topic" does not follow the naming conventions. It
 -- Boost version: 1.54.0
 -- Found the following Boost libraries:
 --   system
+-- +++ processing catkin package: 'robot_descriptions'
+-- ==> add_subdirectory(ur10_rg2_ros-master/robot_descriptions)
 -- +++ processing catkin package: 'rplidar_ros'
 -- ==> add_subdirectory(rplidar_ros)
 -- +++ processing catkin package: 'rplidar_ros2'
@@ -105,10 +122,14 @@ WARNING: Package name "N_Robot_Topic" does not follow the naming conventions. It
 -- +++ processing catkin package: 'robot_vision_deal'
 -- ==> add_subdirectory(robot_vision_deal)
 -- Using these message generators: gencpp;genlisp;genpy
+-- +++ processing catkin package: 'turtlebot_teleop'
+-- ==> add_subdirectory(turtlebot/turtlebot_teleop)
+-- +++ processing catkin package: 'ur10_rg2_moveit_config'
+-- ==> add_subdirectory(ur10_rg2_ros-master/ur10_rg2_moveit_config)
 -- +++ processing catkin package: 'ur_driver'
 -- ==> add_subdirectory(universal_robot/ur_driver)
 -- +++ processing catkin package: 'ur_modern_driver'
--- ==> add_subdirectory(ur_modern_driver)
+-- ==> add_subdirectory(ur10_rg2_ros-master/ur_modern_driver)
 -- Using these message generators: gencpp;genlisp;genpy
 -- +++ processing catkin package: 'jd_vision'
 -- ==> add_subdirectory(jd_vision)
@@ -150,7 +171,7 @@ WARNING: Package name "N_Robot_Topic" does not follow the naming conventions. It
 -- looking for PCL_TRACKING
 -- looking for PCL_APPS
 -- Found PCL: /usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;/usr/lib/libOpenNI.so;vtkCommon;vtkRendering;vtkHybrid;vtkCharts;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;vtkCommon;vtkRendering;vtkHybrid;vtkCharts  
--- jd_vision: 3 messages, 0 services
+-- jd_vision: 4 messages, 0 services
 CMake Warning (dev) at /home/robot2/Downloads/clion-2017.1.3/bin/cmake/share/cmake-3.7/Modules/FindBoost.cmake:1538 (if):
   Policy CMP0054 is not set: Only interpret if() arguments as variables or
   keywords when unquoted.  Run "cmake --help-policy CMP0054" for policy
@@ -164,7 +185,7 @@ Call Stack (most recent call first):
   /usr/share/pcl-1.7/PCLConfig.cmake:112 (find_package)
   /usr/share/pcl-1.7/PCLConfig.cmake:414 (find_boost)
   /usr/share/pcl-1.7/PCLConfig.cmake:603 (find_external_library)
-  jd_vision/CMakeLists.txt:146 (find_package)
+  jd_vision/CMakeLists.txt:147 (find_package)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 CMake Warning (dev) at /home/robot2/Downloads/clion-2017.1.3/bin/cmake/share/cmake-3.7/Modules/FindBoost.cmake:1580 (if):
@@ -180,7 +201,7 @@ Call Stack (most recent call first):
   /usr/share/pcl-1.7/PCLConfig.cmake:112 (find_package)
   /usr/share/pcl-1.7/PCLConfig.cmake:414 (find_boost)
   /usr/share/pcl-1.7/PCLConfig.cmake:603 (find_external_library)
-  jd_vision/CMakeLists.txt:146 (find_package)
+  jd_vision/CMakeLists.txt:147 (find_package)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
 -- Boost version: 1.54.0
@@ -239,6 +260,19 @@ OPENMP FOUND
 -- +++ processing catkin package: 'robot_base_navigation'
 -- ==> add_subdirectory(robot_base_navigation)
 -- Using these message generators: gencpp;genlisp;genpy
+-- +++ processing catkin package: 'jrc_main'
+-- ==> add_subdirectory(jrc_main)
+-- Using these message generators: gencpp;genlisp;genpy
+-- jrc_main: 0 messages, 3 services
+-- +++ processing catkin package: 'ur_control'
+-- ==> add_subdirectory(ur10_rg2_ros-master/ur_control)
+-- Using these message generators: gencpp;genlisp;genpy
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   system
+-- ur_control: 0 messages, 2 services
+-- +++ processing catkin package: 'turtlebot_description'
+-- ==> add_subdirectory(turtlebot/turtlebot_description)
 -- +++ processing catkin package: 'ziqi_ur10'
 -- ==> add_subdirectory(ziqi_ur10)
 -- Boost version: 1.54.0
@@ -296,12 +330,21 @@ CMake Warning (dev) at N_Robot_Topic/CMakeLists.txt:209 (add_dependencies):
   "NMotionCtrl_X64_Topic" does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
-CMake Warning (dev) at jd_vision/CMakeLists.txt:189 (add_dependencies):
+CMake Warning (dev) at jd_vision/CMakeLists.txt:195 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in
   add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
   Use the cmake_policy command to set the policy and suppress this warning.
 
-  The dependency target "ziqi_ur10_generate_message_cpp" of target "pcl_bbox"
+  The dependency target "jd_vision_generate_message_cpp" of target
+  "Synchronizer" does not exist.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at jd_vision/CMakeLists.txt:190 (add_dependencies):
+  Policy CMP0046 is not set: Error on non-existent dependency in
+  add_dependencies.  Run "cmake --help-policy CMP0046" for policy details.
+  Use the cmake_policy command to set the policy and suppress this warning.
+
+  The dependency target "jd_vision_generate_message_cpp" of target "pcl_bbox"
   does not exist.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 

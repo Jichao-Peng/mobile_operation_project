@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/jd_vision_generate_messages_lisp"
   "../devel/share/common-lisp/ros/jd_vision/msg/RobotMsg.lisp"
   "../devel/share/common-lisp/ros/jd_vision/msg/Frame.lisp"
+  "../devel/share/common-lisp/ros/jd_vision/msg/SourceFrame.lisp"
   "../devel/share/common-lisp/ros/jd_vision/msg/Command.lisp"
 )
 

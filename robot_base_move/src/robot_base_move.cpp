@@ -8,10 +8,10 @@
 
 RobotBaseMove::RobotBaseMove()
 {
-    odometry_sub = node.subscribe("odom", 50, &RobotBaseMove::OdometryCallBack, this);
+    odometry_sub = node.subscribe("odom", 50, &RobotBaseMove::OdometryCallBack, this);             //接收odom消息，转化为 cur_pose
     move_ser = node.advertiseService("base_move_service", &RobotBaseMove::MoveService, this);
-    move_sub = node.subscribe("base_move_topic", 50, &RobotBaseMove::MoveCallBack, this);
-    move_state_pub = node.advertise<std_msgs::Bool>("base_move_state_topic", 10);
+    move_sub = node.subscribe("base_move_topic", 50, &RobotBaseMove::MoveCallBack, this);          //接收到目标点，转化为 tar_pose 
+    move_state_pub = node.advertise<std_msgs::Bool>("base_move_state_topic", 10);                  //到达指定位置时，发 1 到 ”move_state_pub“
     cmd_vel_pub = node.advertise<geometry_msgs::Twist>("cmd_vel", 50);
 }
 
@@ -24,7 +24,7 @@ void RobotBaseMove::Run()
 {
     while (ros::ok())
     {
-        if (move_flag)
+        if (move_flag)                                                               //move_flag = 1时运动， move_flag = 0 时停止
         {
             cout<<"Running"<<endl;
             double det_x, det_y, det_z;
@@ -46,7 +46,7 @@ void RobotBaseMove::Run()
 
                     std_msgs::Bool msg;
                     msg.data = 1;
-                    move_state_pub.publish(msg);
+                    move_state_pub.publish(msg);                                    //到达指定位置时，发 1 到 ”base_move_state_topic“
                 }
                 else
                 {

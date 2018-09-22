@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "jd_vision: 3 messages, 0 services")
+message(STATUS "jd_vision: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg;-Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg")
 
@@ -25,6 +25,11 @@ add_custom_target(_jd_vision_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "jd_vision" "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg" "std_msgs/Header:sensor_msgs/Image"
 )
 
+get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg" NAME_WE)
+add_custom_target(_jd_vision_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "jd_vision" "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg" "std_msgs/Header:sensor_msgs/Image"
+)
+
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg" NAME_WE)
 add_custom_target(_jd_vision_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "jd_vision" "/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg" "std_msgs/Float32MultiArray:std_msgs/MultiArrayDimension:std_msgs/Header:std_msgs/MultiArrayLayout"
@@ -44,6 +49,12 @@ _generate_msg_cpp(jd_vision
 )
 _generate_msg_cpp(jd_vision
   "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/jd_vision
+)
+_generate_msg_cpp(jd_vision
+  "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/jd_vision
@@ -73,6 +84,8 @@ get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Robot
 add_dependencies(jd_vision_generate_messages_cpp _jd_vision_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg" NAME_WE)
 add_dependencies(jd_vision_generate_messages_cpp _jd_vision_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg" NAME_WE)
+add_dependencies(jd_vision_generate_messages_cpp _jd_vision_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg" NAME_WE)
 add_dependencies(jd_vision_generate_messages_cpp _jd_vision_generate_messages_check_deps_${_filename})
 
@@ -93,6 +106,12 @@ _generate_msg_lisp(jd_vision
 )
 _generate_msg_lisp(jd_vision
   "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/jd_vision
+)
+_generate_msg_lisp(jd_vision
+  "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/jd_vision
@@ -122,6 +141,8 @@ get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Robot
 add_dependencies(jd_vision_generate_messages_lisp _jd_vision_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg" NAME_WE)
 add_dependencies(jd_vision_generate_messages_lisp _jd_vision_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg" NAME_WE)
+add_dependencies(jd_vision_generate_messages_lisp _jd_vision_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg" NAME_WE)
 add_dependencies(jd_vision_generate_messages_lisp _jd_vision_generate_messages_check_deps_${_filename})
 
@@ -142,6 +163,12 @@ _generate_msg_py(jd_vision
 )
 _generate_msg_py(jd_vision
   "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/jd_vision
+)
+_generate_msg_py(jd_vision
+  "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/jd_vision
@@ -170,6 +197,8 @@ add_dependencies(jd_vision_generate_messages jd_vision_generate_messages_py)
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/RobotMsg.msg" NAME_WE)
 add_dependencies(jd_vision_generate_messages_py _jd_vision_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg" NAME_WE)
+add_dependencies(jd_vision_generate_messages_py _jd_vision_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg" NAME_WE)
 add_dependencies(jd_vision_generate_messages_py _jd_vision_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg" NAME_WE)
 add_dependencies(jd_vision_generate_messages_py _jd_vision_generate_messages_check_deps_${_filename})

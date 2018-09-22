@@ -56,16 +56,59 @@ CMAKE_BINARY_DIR = /home/robot2/catkin_ws/src/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : install/local/fast
+.PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -79,59 +122,16 @@ install/fast: preinstall/fast
 	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/robot2/Downloads/clion-2017.1.3/bin/cmake/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,124 +166,79 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_node.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_node.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_node.dir/rule
+robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-robot_base_control_node: robot_base_control/CMakeFiles/robot_base_control_node.dir/rule
+std_srvs_generate_messages_py: robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
-.PHONY : robot_base_control_node
+.PHONY : std_srvs_generate_messages_py
 
 # fast build rule for target.
-robot_base_control_node/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_node.dir/build.make robot_base_control/CMakeFiles/robot_base_control_node.dir/build
-.PHONY : robot_base_control_node/fast
+std_srvs_generate_messages_py/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/build.make robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule
+robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule
 
 # Convenience name for target.
-robot_base_control_generate_messages_py: robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule
+robot_base_control_gencpp: robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule
 
-.PHONY : robot_base_control_generate_messages_py
+.PHONY : robot_base_control_gencpp
 
 # fast build rule for target.
-robot_base_control_generate_messages_py/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/build
-.PHONY : robot_base_control_generate_messages_py/fast
+robot_base_control_gencpp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/build
+.PHONY : robot_base_control_gencpp/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule
+robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-robot_base_control_genpy: robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule
+robot_base_control_generate_messages_cpp: robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule
 
-.PHONY : robot_base_control_genpy
+.PHONY : robot_base_control_generate_messages_cpp
 
 # fast build rule for target.
-robot_base_control_genpy/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_genpy.dir/build.make robot_base_control/CMakeFiles/robot_base_control_genpy.dir/build
-.PHONY : robot_base_control_genpy/fast
+robot_base_control_generate_messages_cpp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/build
+.PHONY : robot_base_control_generate_messages_cpp/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule
+robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule
 
 # Convenience name for target.
-robot_base_control_genlisp: robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule
+robot_base_control_generate_messages: robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule
 
-.PHONY : robot_base_control_genlisp
+.PHONY : robot_base_control_generate_messages
 
 # fast build rule for target.
-robot_base_control_genlisp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/build
-.PHONY : robot_base_control_genlisp/fast
+robot_base_control_generate_messages/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/build
+.PHONY : robot_base_control_generate_messages/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule
+robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-robot_base_control_generate_messages_lisp: robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule
+std_srvs_generate_messages_lisp: robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
-.PHONY : robot_base_control_generate_messages_lisp
+.PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
-robot_base_control_generate_messages_lisp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/build
-.PHONY : robot_base_control_generate_messages_lisp/fast
-
-# Convenience name for target.
-robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-.PHONY : robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_lisp: robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_lisp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_lisp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
-.PHONY : move_base_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_cpp: robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-# Convenience name for target.
-robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
-.PHONY : robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_py: robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_py
-
-# fast build rule for target.
-move_base_msgs_generate_messages_py/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
-.PHONY : move_base_msgs_generate_messages_py/fast
+std_srvs_generate_messages_lisp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
 robot_base_control/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
@@ -316,79 +271,166 @@ _robot_base_control_generate_messages_check_deps_base_goal/fast:
 .PHONY : _robot_base_control_generate_messages_check_deps_base_goal/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_lisp: robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+std_srvs_generate_messages_cpp: robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 
-.PHONY : std_srvs_generate_messages_lisp
+.PHONY : std_srvs_generate_messages_cpp
 
 # fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make robot_base_control/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
+std_srvs_generate_messages_cpp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make robot_base_control/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule
+robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
+.PHONY : robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-robot_base_control_generate_messages: robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/rule
+move_base_msgs_generate_messages_py: robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
 
-.PHONY : robot_base_control_generate_messages
+.PHONY : move_base_msgs_generate_messages_py
 
 # fast build rule for target.
-robot_base_control_generate_messages/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages.dir/build
-.PHONY : robot_base_control_generate_messages/fast
+move_base_msgs_generate_messages_py/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make robot_base_control/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
+.PHONY : move_base_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule
+robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-robot_base_control_generate_messages_cpp: robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/rule
+robot_base_control_generate_messages_lisp: robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/rule
 
-.PHONY : robot_base_control_generate_messages_cpp
+.PHONY : robot_base_control_generate_messages_lisp
 
 # fast build rule for target.
-robot_base_control_generate_messages_cpp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages_cpp.dir/build
-.PHONY : robot_base_control_generate_messages_cpp/fast
+robot_base_control_generate_messages_lisp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages_lisp.dir/build
+.PHONY : robot_base_control_generate_messages_lisp/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule
-.PHONY : robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule
+robot_base_control/CMakeFiles/new_robot_base_control.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/new_robot_base_control.dir/rule
+.PHONY : robot_base_control/CMakeFiles/new_robot_base_control.dir/rule
 
 # Convenience name for target.
-robot_base_control_gencpp: robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/rule
+new_robot_base_control: robot_base_control/CMakeFiles/new_robot_base_control.dir/rule
 
-.PHONY : robot_base_control_gencpp
+.PHONY : new_robot_base_control
 
 # fast build rule for target.
-robot_base_control_gencpp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_gencpp.dir/build
-.PHONY : robot_base_control_gencpp/fast
+new_robot_base_control/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/new_robot_base_control.dir/build.make robot_base_control/CMakeFiles/new_robot_base_control.dir/build
+.PHONY : new_robot_base_control/fast
 
 # Convenience name for target.
-robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_py: robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+robot_base_control_genlisp: robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/rule
 
-.PHONY : std_srvs_generate_messages_py
+.PHONY : robot_base_control_genlisp
 
 # fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/build.make robot_base_control/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
+robot_base_control_genlisp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/build.make robot_base_control/CMakeFiles/robot_base_control_genlisp.dir/build
+.PHONY : robot_base_control_genlisp/fast
+
+# Convenience name for target.
+robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+.PHONY : robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_lisp: robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_lisp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_lisp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make robot_base_control/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+.PHONY : move_base_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule
+
+# Convenience name for target.
+robot_base_control_genpy: robot_base_control/CMakeFiles/robot_base_control_genpy.dir/rule
+
+.PHONY : robot_base_control_genpy
+
+# fast build rule for target.
+robot_base_control_genpy/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_genpy.dir/build.make robot_base_control/CMakeFiles/robot_base_control_genpy.dir/build
+.PHONY : robot_base_control_genpy/fast
+
+# Convenience name for target.
+robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule
+
+# Convenience name for target.
+robot_base_control_generate_messages_py: robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/rule
+
+.PHONY : robot_base_control_generate_messages_py
+
+# fast build rule for target.
+robot_base_control_generate_messages_py/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/build.make robot_base_control/CMakeFiles/robot_base_control_generate_messages_py.dir/build
+.PHONY : robot_base_control_generate_messages_py/fast
+
+# Convenience name for target.
+robot_base_control/CMakeFiles/robot_base_control_node.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 robot_base_control/CMakeFiles/robot_base_control_node.dir/rule
+.PHONY : robot_base_control/CMakeFiles/robot_base_control_node.dir/rule
+
+# Convenience name for target.
+robot_base_control_node: robot_base_control/CMakeFiles/robot_base_control_node.dir/rule
+
+.PHONY : robot_base_control_node
+
+# fast build rule for target.
+robot_base_control_node/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/robot_base_control_node.dir/build.make robot_base_control/CMakeFiles/robot_base_control_node.dir/build
+.PHONY : robot_base_control_node/fast
+
+src/new_robot_base_control.o: src/new_robot_base_control.cpp.o
+
+.PHONY : src/new_robot_base_control.o
+
+# target to build an object file
+src/new_robot_base_control.cpp.o:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/new_robot_base_control.dir/build.make robot_base_control/CMakeFiles/new_robot_base_control.dir/src/new_robot_base_control.cpp.o
+.PHONY : src/new_robot_base_control.cpp.o
+
+src/new_robot_base_control.i: src/new_robot_base_control.cpp.i
+
+.PHONY : src/new_robot_base_control.i
+
+# target to preprocess a source file
+src/new_robot_base_control.cpp.i:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/new_robot_base_control.dir/build.make robot_base_control/CMakeFiles/new_robot_base_control.dir/src/new_robot_base_control.cpp.i
+.PHONY : src/new_robot_base_control.cpp.i
+
+src/new_robot_base_control.s: src/new_robot_base_control.cpp.s
+
+.PHONY : src/new_robot_base_control.s
+
+# target to generate assembly for a file
+src/new_robot_base_control.cpp.s:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f robot_base_control/CMakeFiles/new_robot_base_control.dir/build.make robot_base_control/CMakeFiles/new_robot_base_control.dir/src/new_robot_base_control.cpp.s
+.PHONY : src/new_robot_base_control.cpp.s
 
 src/robot_base_control.o: src/robot_base_control.cpp.o
 
@@ -423,28 +465,32 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... robot_base_control_node"
-	@echo "... edit_cache"
-	@echo "... robot_base_control_generate_messages_py"
-	@echo "... robot_base_control_genpy"
-	@echo "... robot_base_control_genlisp"
-	@echo "... robot_base_control_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... move_base_msgs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... robot_base_control_gencpp"
+	@echo "... test"
+	@echo "... robot_base_control_generate_messages_cpp"
+	@echo "... robot_base_control_generate_messages"
+	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... _robot_base_control_generate_messages_check_deps_base_goal"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... robot_base_control_generate_messages"
-	@echo "... robot_base_control_generate_messages_cpp"
-	@echo "... test"
-	@echo "... robot_base_control_gencpp"
-	@echo "... std_srvs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... list_install_components"
+	@echo "... move_base_msgs_generate_messages_py"
+	@echo "... robot_base_control_generate_messages_lisp"
+	@echo "... new_robot_base_control"
+	@echo "... robot_base_control_genlisp"
+	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... robot_base_control_genpy"
+	@echo "... robot_base_control_generate_messages_py"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... robot_base_control_node"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... src/new_robot_base_control.o"
+	@echo "... src/new_robot_base_control.i"
+	@echo "... src/new_robot_base_control.s"
 	@echo "... src/robot_base_control.o"
 	@echo "... src/robot_base_control.i"
 	@echo "... src/robot_base_control.s"

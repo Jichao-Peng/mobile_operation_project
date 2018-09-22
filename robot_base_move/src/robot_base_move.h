@@ -45,7 +45,7 @@ private:
     double vel_y_threshold = 0.2;
     double vel_z_threshold = 0.15;
 
-    bool move_flag = false;
+    bool move_flag = false;                                                 //停止为 false ,开始移动为 true
 
     void OdometryCallBack(nav_msgs::OdometryConstPtr msg);
     void MoveCallBack(move_base_msgs::MoveBaseGoal goal);

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: robot_descriptions
+Description: Description of robot_descriptions
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

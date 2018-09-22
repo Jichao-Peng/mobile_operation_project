@@ -1,0 +1,4 @@
+std_msgs/String[] names
+std_msgs/Float64[] numbers
+---
+std_msgs/Float64[] left_numbers

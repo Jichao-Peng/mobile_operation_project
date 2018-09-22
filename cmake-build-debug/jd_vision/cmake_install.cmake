@@ -37,6 +37,7 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
     "/home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg"
     "/home/robot2/catkin_ws/src/jd_vision/msg/RobotMsg.msg"
     "/home/robot2/catkin_ws/src/jd_vision/msg/Command.msg"
+    "/home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg"
     )
 endif()
 

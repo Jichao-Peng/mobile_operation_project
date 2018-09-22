@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/jd_vision_generate_messages_cpp"
   "../devel/include/jd_vision/RobotMsg.h"
   "../devel/include/jd_vision/Frame.h"
+  "../devel/include/jd_vision/SourceFrame.h"
   "../devel/include/jd_vision/Command.h"
 )
 

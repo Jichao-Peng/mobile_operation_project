@@ -7,17 +7,17 @@
 RobotBaseOdometry::RobotBaseOdometry(double wheel_radius, double base_width, double base_length, int deceleration_radio, int encoder_lines):
     kWheelRadius(wheel_radius),kBaseWidth(base_width),kBaseLength(base_length),kDecelerationRatio(deceleration_radio),kEncoderLines(encoder_lines)
 {
-//    clear_pub = node.advertise<N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg>("/NMotionCtrlTopic/ClearEncoderCount",50);
-//
-//    sleep(3);
-//
-//    N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg clear_msg;
-//    clear_msg.command = 1;
-//    clear_pub.publish(clear_msg);
-//    clear_pub.publish(clear_msg);
-//    clear_pub.publish(clear_msg);
-//
-//    sleep(1);
+    clear_pub = node.advertise<N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg>("/NMotionCtrlTopic/ClearEncoderCount",50);
+
+    sleep(3);
+
+    N_Robot_Topic::NMotionCtrlTopic_ClearEncoderCount_msg clear_msg;
+    clear_msg.command = 1;
+    clear_pub.publish(clear_msg);
+    clear_pub.publish(clear_msg);
+    clear_pub.publish(clear_msg);
+
+    sleep(5);
 
     encoder_sub = node.subscribe("/NMotionCtrlTopic/EncoderCount",1000,&RobotBaseOdometry::EncoderCallBack,this);
     odometry_pub = node.advertise<nav_msgs::Odometry>("odom", 50);

@@ -1,0 +1,5 @@
+通过 service 方式获取并移动至目标点， 调试命令如下：
+
+$ roscore
+$ roslaunch robot_base_control service_move.launch
+$ rosservice call /base_goal_service "A1"

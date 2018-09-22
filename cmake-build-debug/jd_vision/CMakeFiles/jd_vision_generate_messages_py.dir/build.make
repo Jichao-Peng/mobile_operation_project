@@ -55,6 +55,7 @@ include jd_vision/CMakeFiles/jd_vision_generate_messages_py.dir/progress.make
 
 jd_vision/CMakeFiles/jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_RobotMsg.py
 jd_vision/CMakeFiles/jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_Frame.py
+jd_vision/CMakeFiles/jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_SourceFrame.py
 jd_vision/CMakeFiles/jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py
 jd_vision/CMakeFiles/jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/__init__.py
 
@@ -73,25 +74,34 @@ devel/lib/python2.7/dist-packages/jd_vision/msg/_Frame.py: /opt/ros/indigo/share
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG jd_vision/Frame"
 	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/jd_vision/msg
 
+devel/lib/python2.7/dist-packages/jd_vision/msg/_SourceFrame.py: /opt/ros/indigo/lib/genpy/genmsg_py.py
+devel/lib/python2.7/dist-packages/jd_vision/msg/_SourceFrame.py: ../jd_vision/msg/SourceFrame.msg
+devel/lib/python2.7/dist-packages/jd_vision/msg/_SourceFrame.py: /opt/ros/indigo/share/std_msgs/msg/Header.msg
+devel/lib/python2.7/dist-packages/jd_vision/msg/_SourceFrame.py: /opt/ros/indigo/share/sensor_msgs/msg/Image.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG jd_vision/SourceFrame"
+	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/jd_vision/msg
+
 devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py: /opt/ros/indigo/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py: ../jd_vision/msg/Command.msg
 devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py: /opt/ros/indigo/share/std_msgs/msg/Float32MultiArray.msg
 devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py: /opt/ros/indigo/share/std_msgs/msg/MultiArrayDimension.msg
 devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py: /opt/ros/indigo/share/std_msgs/msg/MultiArrayLayout.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG jd_vision/Command"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG jd_vision/Command"
 	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/robot2/catkin_ws/src/jd_vision/msg/Command.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/jd_vision/msg
 
 devel/lib/python2.7/dist-packages/jd_vision/msg/__init__.py: /opt/ros/indigo/lib/genpy/genmsg_py.py
 devel/lib/python2.7/dist-packages/jd_vision/msg/__init__.py: devel/lib/python2.7/dist-packages/jd_vision/msg/_RobotMsg.py
 devel/lib/python2.7/dist-packages/jd_vision/msg/__init__.py: devel/lib/python2.7/dist-packages/jd_vision/msg/_Frame.py
+devel/lib/python2.7/dist-packages/jd_vision/msg/__init__.py: devel/lib/python2.7/dist-packages/jd_vision/msg/_SourceFrame.py
 devel/lib/python2.7/dist-packages/jd_vision/msg/__init__.py: devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for jd_vision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for jd_vision"
 	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/lib/python2.7/dist-packages/jd_vision/msg --initpy
 
 jd_vision_generate_messages_py: jd_vision/CMakeFiles/jd_vision_generate_messages_py
 jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_RobotMsg.py
 jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_Frame.py
+jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_SourceFrame.py
 jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/_Command.py
 jd_vision_generate_messages_py: devel/lib/python2.7/dist-packages/jd_vision/msg/__init__.py
 jd_vision_generate_messages_py: jd_vision/CMakeFiles/jd_vision_generate_messages_py.dir/build.make

@@ -1,0 +1,8 @@
+prefix=/home/robot2/catkin_ws/src/cmake-build-debug/devel
+
+Name: ur10_rg2_moveit_config
+Description: Description of ur10_rg2_moveit_config
+Version: 0.2.0
+Cflags: 
+Libs: -L/home/robot2/catkin_ws/src/cmake-build-debug/devel/lib 
+Requires: 

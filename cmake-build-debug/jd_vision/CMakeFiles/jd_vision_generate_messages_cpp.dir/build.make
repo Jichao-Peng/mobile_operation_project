@@ -55,6 +55,7 @@ include jd_vision/CMakeFiles/jd_vision_generate_messages_cpp.dir/progress.make
 
 jd_vision/CMakeFiles/jd_vision_generate_messages_cpp: devel/include/jd_vision/RobotMsg.h
 jd_vision/CMakeFiles/jd_vision_generate_messages_cpp: devel/include/jd_vision/Frame.h
+jd_vision/CMakeFiles/jd_vision_generate_messages_cpp: devel/include/jd_vision/SourceFrame.h
 jd_vision/CMakeFiles/jd_vision_generate_messages_cpp: devel/include/jd_vision/Command.h
 
 
@@ -74,6 +75,14 @@ devel/include/jd_vision/Frame.h: /opt/ros/indigo/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from jd_vision/Frame.msg"
 	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/include/jd_vision -e /opt/ros/indigo/share/gencpp/cmake/..
 
+devel/include/jd_vision/SourceFrame.h: /opt/ros/indigo/lib/gencpp/gen_cpp.py
+devel/include/jd_vision/SourceFrame.h: ../jd_vision/msg/SourceFrame.msg
+devel/include/jd_vision/SourceFrame.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
+devel/include/jd_vision/SourceFrame.h: /opt/ros/indigo/share/sensor_msgs/msg/Image.msg
+devel/include/jd_vision/SourceFrame.h: /opt/ros/indigo/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from jd_vision/SourceFrame.msg"
+	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/include/jd_vision -e /opt/ros/indigo/share/gencpp/cmake/..
+
 devel/include/jd_vision/Command.h: /opt/ros/indigo/lib/gencpp/gen_cpp.py
 devel/include/jd_vision/Command.h: ../jd_vision/msg/Command.msg
 devel/include/jd_vision/Command.h: /opt/ros/indigo/share/std_msgs/msg/Float32MultiArray.msg
@@ -81,12 +90,13 @@ devel/include/jd_vision/Command.h: /opt/ros/indigo/share/std_msgs/msg/MultiArray
 devel/include/jd_vision/Command.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 devel/include/jd_vision/Command.h: /opt/ros/indigo/share/std_msgs/msg/MultiArrayLayout.msg
 devel/include/jd_vision/Command.h: /opt/ros/indigo/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from jd_vision/Command.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from jd_vision/Command.msg"
 	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/robot2/catkin_ws/src/jd_vision/msg/Command.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/include/jd_vision -e /opt/ros/indigo/share/gencpp/cmake/..
 
 jd_vision_generate_messages_cpp: jd_vision/CMakeFiles/jd_vision_generate_messages_cpp
 jd_vision_generate_messages_cpp: devel/include/jd_vision/RobotMsg.h
 jd_vision_generate_messages_cpp: devel/include/jd_vision/Frame.h
+jd_vision_generate_messages_cpp: devel/include/jd_vision/SourceFrame.h
 jd_vision_generate_messages_cpp: devel/include/jd_vision/Command.h
 jd_vision_generate_messages_cpp: jd_vision/CMakeFiles/jd_vision_generate_messages_cpp.dir/build.make
 

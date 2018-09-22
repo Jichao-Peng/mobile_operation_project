@@ -29,6 +29,7 @@ catkin_package(
 )
 
 include_directories(
+  include ${catkin_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -40,3 +41,12 @@ target_link_libraries(${PROJECT_NAME}_node
  )
 
 
+
+
+add_executable(new_robot_base_control
+  src/new_robot_base_control.cpp
+)
+add_dependencies(new_robot_base_control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(new_robot_base_control
+  ${catkin_LIBRARIES}
+)

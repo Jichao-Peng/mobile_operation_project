@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+jd_vision/CMakeFiles/Synchronizer.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 jd_vision/CMakeFiles/Synchronizer.dir/rule
+.PHONY : jd_vision/CMakeFiles/Synchronizer.dir/rule
+
+# Convenience name for target.
+Synchronizer: jd_vision/CMakeFiles/Synchronizer.dir/rule
+
+.PHONY : Synchronizer
+
+# fast build rule for target.
+Synchronizer/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/Synchronizer.dir/build.make jd_vision/CMakeFiles/Synchronizer.dir/build
+.PHONY : Synchronizer/fast
+
+# Convenience name for target.
 jd_vision/CMakeFiles/pcl_bbox.dir/rule:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 jd_vision/CMakeFiles/pcl_bbox.dir/rule
 .PHONY : jd_vision/CMakeFiles/pcl_bbox.dir/rule
@@ -239,6 +254,21 @@ jd_vision_generate_messages_lisp: jd_vision/CMakeFiles/jd_vision_generate_messag
 jd_vision_generate_messages_lisp/fast:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/jd_vision_generate_messages_lisp.dir/build.make jd_vision/CMakeFiles/jd_vision_generate_messages_lisp.dir/build
 .PHONY : jd_vision_generate_messages_lisp/fast
+
+# Convenience name for target.
+jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule
+.PHONY : jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule
+
+# Convenience name for target.
+jd_vision_gencpp: jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule
+
+.PHONY : jd_vision_gencpp
+
+# fast build rule for target.
+jd_vision_gencpp/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/jd_vision_gencpp.dir/build.make jd_vision/CMakeFiles/jd_vision_gencpp.dir/build
+.PHONY : jd_vision_gencpp/fast
 
 # Convenience name for target.
 jd_vision/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule:
@@ -421,21 +451,6 @@ shape_msgs_generate_messages_py/fast:
 .PHONY : shape_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule
-.PHONY : jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule
-
-# Convenience name for target.
-jd_vision_gencpp: jd_vision/CMakeFiles/jd_vision_gencpp.dir/rule
-
-.PHONY : jd_vision_gencpp
-
-# fast build rule for target.
-jd_vision_gencpp/fast:
-	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/jd_vision_gencpp.dir/build.make jd_vision/CMakeFiles/jd_vision_gencpp.dir/build
-.PHONY : jd_vision_gencpp/fast
-
-# Convenience name for target.
 jd_vision/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 jd_vision/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
 .PHONY : jd_vision/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
@@ -586,6 +601,21 @@ _jd_vision_generate_messages_check_deps_RobotMsg/fast:
 .PHONY : _jd_vision_generate_messages_check_deps_RobotMsg/fast
 
 # Convenience name for target.
+jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_SourceFrame.dir/rule:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_SourceFrame.dir/rule
+.PHONY : jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_SourceFrame.dir/rule
+
+# Convenience name for target.
+_jd_vision_generate_messages_check_deps_SourceFrame: jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_SourceFrame.dir/rule
+
+.PHONY : _jd_vision_generate_messages_check_deps_SourceFrame
+
+# fast build rule for target.
+_jd_vision_generate_messages_check_deps_SourceFrame/fast:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_SourceFrame.dir/build.make jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_SourceFrame.dir/build
+.PHONY : _jd_vision_generate_messages_check_deps_SourceFrame/fast
+
+# Convenience name for target.
 jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_Command.dir/rule:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_Command.dir/rule
 .PHONY : jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_Command.dir/rule
@@ -599,6 +629,33 @@ _jd_vision_generate_messages_check_deps_Command: jd_vision/CMakeFiles/_jd_vision
 _jd_vision_generate_messages_check_deps_Command/fast:
 	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_Command.dir/build.make jd_vision/CMakeFiles/_jd_vision_generate_messages_check_deps_Command.dir/build
 .PHONY : _jd_vision_generate_messages_check_deps_Command/fast
+
+src/Synchronizer.o: src/Synchronizer.cpp.o
+
+.PHONY : src/Synchronizer.o
+
+# target to build an object file
+src/Synchronizer.cpp.o:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/Synchronizer.dir/build.make jd_vision/CMakeFiles/Synchronizer.dir/src/Synchronizer.cpp.o
+.PHONY : src/Synchronizer.cpp.o
+
+src/Synchronizer.i: src/Synchronizer.cpp.i
+
+.PHONY : src/Synchronizer.i
+
+# target to preprocess a source file
+src/Synchronizer.cpp.i:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/Synchronizer.dir/build.make jd_vision/CMakeFiles/Synchronizer.dir/src/Synchronizer.cpp.i
+.PHONY : src/Synchronizer.cpp.i
+
+src/Synchronizer.s: src/Synchronizer.cpp.s
+
+.PHONY : src/Synchronizer.s
+
+# target to generate assembly for a file
+src/Synchronizer.cpp.s:
+	cd /home/robot2/catkin_ws/src/cmake-build-debug && $(MAKE) -f jd_vision/CMakeFiles/Synchronizer.dir/build.make jd_vision/CMakeFiles/Synchronizer.dir/src/Synchronizer.cpp.s
+.PHONY : src/Synchronizer.cpp.s
 
 src/config.o: src/config.cpp.o
 
@@ -778,12 +835,14 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Synchronizer"
 	@echo "... pcl_bbox"
 	@echo "... config"
 	@echo "... eh_system"
 	@echo "... jd_vision_genlisp"
 	@echo "... list_install_components"
 	@echo "... jd_vision_generate_messages_lisp"
+	@echo "... jd_vision_gencpp"
 	@echo "... moveit_msgs_generate_messages_cpp"
 	@echo "... jd_vision_generate_messages_py"
 	@echo "... object_recognition_msgs_generate_messages_cpp"
@@ -797,7 +856,6 @@ help:
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... shape_msgs_generate_messages_py"
-	@echo "... jd_vision_gencpp"
 	@echo "... shape_msgs_generate_messages_lisp"
 	@echo "... shape_msgs_generate_messages_cpp"
 	@echo "... jd_vision_generate_messages_cpp"
@@ -809,7 +867,11 @@ help:
 	@echo "... _jd_vision_generate_messages_check_deps_Frame"
 	@echo "... jd_vision_generate_messages"
 	@echo "... _jd_vision_generate_messages_check_deps_RobotMsg"
+	@echo "... _jd_vision_generate_messages_check_deps_SourceFrame"
 	@echo "... _jd_vision_generate_messages_check_deps_Command"
+	@echo "... src/Synchronizer.o"
+	@echo "... src/Synchronizer.i"
+	@echo "... src/Synchronizer.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"

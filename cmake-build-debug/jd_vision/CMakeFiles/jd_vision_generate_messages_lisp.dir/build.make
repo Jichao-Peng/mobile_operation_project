@@ -55,6 +55,7 @@ include jd_vision/CMakeFiles/jd_vision_generate_messages_lisp.dir/progress.make
 
 jd_vision/CMakeFiles/jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/RobotMsg.lisp
 jd_vision/CMakeFiles/jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/Frame.lisp
+jd_vision/CMakeFiles/jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/SourceFrame.lisp
 jd_vision/CMakeFiles/jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/Command.lisp
 
 
@@ -72,18 +73,26 @@ devel/share/common-lisp/ros/jd_vision/msg/Frame.lisp: /opt/ros/indigo/share/sens
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from jd_vision/Frame.msg"
 	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot2/catkin_ws/src/jd_vision/msg/Frame.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/share/common-lisp/ros/jd_vision/msg
 
+devel/share/common-lisp/ros/jd_vision/msg/SourceFrame.lisp: /opt/ros/indigo/lib/genlisp/gen_lisp.py
+devel/share/common-lisp/ros/jd_vision/msg/SourceFrame.lisp: ../jd_vision/msg/SourceFrame.msg
+devel/share/common-lisp/ros/jd_vision/msg/SourceFrame.lisp: /opt/ros/indigo/share/std_msgs/msg/Header.msg
+devel/share/common-lisp/ros/jd_vision/msg/SourceFrame.lisp: /opt/ros/indigo/share/sensor_msgs/msg/Image.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from jd_vision/SourceFrame.msg"
+	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot2/catkin_ws/src/jd_vision/msg/SourceFrame.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/share/common-lisp/ros/jd_vision/msg
+
 devel/share/common-lisp/ros/jd_vision/msg/Command.lisp: /opt/ros/indigo/lib/genlisp/gen_lisp.py
 devel/share/common-lisp/ros/jd_vision/msg/Command.lisp: ../jd_vision/msg/Command.msg
 devel/share/common-lisp/ros/jd_vision/msg/Command.lisp: /opt/ros/indigo/share/std_msgs/msg/Float32MultiArray.msg
 devel/share/common-lisp/ros/jd_vision/msg/Command.lisp: /opt/ros/indigo/share/std_msgs/msg/MultiArrayDimension.msg
 devel/share/common-lisp/ros/jd_vision/msg/Command.lisp: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 devel/share/common-lisp/ros/jd_vision/msg/Command.lisp: /opt/ros/indigo/share/std_msgs/msg/MultiArrayLayout.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from jd_vision/Command.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/robot2/catkin_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from jd_vision/Command.msg"
 	cd /home/robot2/catkin_ws/src/cmake-build-debug/jd_vision && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/robot2/catkin_ws/src/jd_vision/msg/Command.msg -Ijd_vision:/home/robot2/catkin_ws/src/jd_vision/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Iur_msgs:/home/robot2/catkin_ws/src/universal_robot/ur_msgs/msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -p jd_vision -o /home/robot2/catkin_ws/src/cmake-build-debug/devel/share/common-lisp/ros/jd_vision/msg
 
 jd_vision_generate_messages_lisp: jd_vision/CMakeFiles/jd_vision_generate_messages_lisp
 jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/RobotMsg.lisp
 jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/Frame.lisp
+jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/SourceFrame.lisp
 jd_vision_generate_messages_lisp: devel/share/common-lisp/ros/jd_vision/msg/Command.lisp
 jd_vision_generate_messages_lisp: jd_vision/CMakeFiles/jd_vision_generate_messages_lisp.dir/build.make
 
